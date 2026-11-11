@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inglês que Abre Portas | Teste grátis de inglês para entrevistas</title>
+<meta name="description" content="Descubra se o seu inglês está pronto para a próxima entrevista ou oportunidade. Teste grátis de 2 minutos com resultado personalizado.">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1471201201859881');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+<script src="https://utmizey.com.br/v3/utmizey.js"
+        data-utmizey-id="2602fc0d-7a48-4657-bc74-94fd23eb893d"
+        data-utmizey-checkout="ggcheckout.app,ggcheckout.com"
+        data-utmizey-hotmart
+        defer></script>
+<style>
+:root{
+  --ink:#0b1b3a;--mut:#5d6b8a;--ac:#1f6bf2;--acd:#1250b8;
+  --red:#e53946;--ok:#16a870;--line:#dfe7f5;
+  --gold:#f59e0b;--gold-bg:#fffbeb;--gold-bdr:#fde68a;
+  --surface:rgba(255,255,255,.88);--glass:rgba(255,255,255,.72);
+  --shadow:0 12px 40px rgba(20,60,140,.12);
+  --shadow-lg:0 20px 60px rgba(20,60,140,.18);
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'Inter','Segoe UI',system-ui,sans-serif;line-height:1.5;background:#eaf2ff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* === BACKGROUND === */
+.bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(135deg,#e6f0ff 0%,#cfe2ff 30%,#f3f8ff 60%,#d6e6ff 100%);background-size:300% 300%;animation:mv 14s ease-in-out infinite;overflow:hidden}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;animation:fl 18s ease-in-out infinite}
+.bg i:nth-child(1){width:360px;height:360px;background:#2b7bff;left:-100px;top:6%}
+.bg i:nth-child(2){width:260px;height:260px;background:#e53946;right:-80px;top:50%;opacity:.18;animation-delay:-6s}
+.bg i:nth-child(3){width:340px;height:340px;background:#7fb2ff;left:28%;bottom:-120px;animation-delay:-11s}
+@keyframes mv{50%{background-position:100% 50%}}
+@keyframes fl{50%{transform:translate(40px,-50px) scale(1.05)}}
+
+/* === LAYOUT === */
+main{max-width:560px;margin:0 auto;padding:10px 16px 40px;min-height:100vh}
+
+/* === HEADER === */
+.top{display:flex;align-items:center;justify-content:space-between;height:56px}
+.top button{width:40px;height:40px;border:0;background:none;font-size:30px;line-height:1;color:var(--mut);cursor:pointer;transition:color .2s}
+.top button:hover{color:var(--ink)}
+.top img{width:44px;height:44px}
+.top span{width:40px}
+
+/* === BARRA PROGRESSO === */
+.bar{height:10px;background:rgba(255,255,255,.7);border-radius:6px;margin:4px 0 22px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);backdrop-filter:blur(4px)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#1f6bf2,#4a9bff,#7fb2ff);border-radius:6px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+
+/* === TIPOGRAFIA === */
+h1,h2{text-align:center;letter-spacing:-.03em;line-height:1.15;margin:.3em 0 .6em}
+h1{font-size:30px;font-weight:900}
+h2{font-size:24px;font-weight:800}
+.red{color:var(--red)}
+.c{text-align:center}
+
+/* === CARDS === */
+.card{background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow)}
+
+/* === OPÇÕES === */
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:16px 18px;margin:0 0 12px;border:1.5px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);font:inherit;font-size:16px;cursor:pointer;box-shadow:0 4px 16px rgba(20,60,140,.06);transition:all .2s cubic-bezier(.4,0,.2,1)}
+.opt:hover:not(:disabled){border-color:var(--ac);transform:translateY(-3px);box-shadow:0 8px 24px rgba(31,107,242,.15)}
+.opt .ic{font-size:28px;width:36px;text-align:center}
+.opt .tx{flex:1}.opt small{display:block;color:var(--mut);font-size:14px;margin-top:2px}
+.opt .bx{width:30px;height:30px;border:1.5px solid var(--line);border-radius:8px;display:grid;place-items:center;font-weight:800;color:#fff;transition:all .2s}
+.opt.sel{border-color:var(--ac);background:rgba(31,107,242,.04)}.opt.sel .bx{background:var(--ac);border-color:var(--ac)}.opt.sel .bx:after{content:"✓"}
+.opt.ok{border-color:var(--ok);background:rgba(22,168,112,.06)}.opt.ok .bx{background:var(--ok);border-color:var(--ok)}.opt.ok .bx:after{content:"✓"}
+.opt.no{border-color:var(--red);background:rgba(229,57,70,.04)}.opt.no .bx{background:var(--red);border-color:var(--red)}.opt.no .bx:after{content:"✕"}
+
+/* === OPÇÕES COM FOTOS (TELA DE IDADE) === */
+.opt-age{flex-direction:column;align-items:stretch;padding:12px;gap:12px;margin-bottom:14px}
+.opt-age-photos{display:flex;gap:10px;width:100%}
+.opt-age-img-wrap{position:relative;flex:1 1 0;min-width:0;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#e6eeff 0%,#d5e3ff 100%);box-sizing:border-box;transition:transform .2s ease,box-shadow .2s ease}
+.opt-age-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px;z-index:2;transition:transform .25s ease;pointer-events:none;-webkit-user-drag:none;user-select:none;filter:none!important}
+.opt-age-ph{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(135deg,#e6eeff 0%,#d5e3ff 100%);border-radius:14px;z-index:1;transition:transform .25s ease;pointer-events:none;user-select:none}
+.opt-age-img-wrap.ph .opt-age-ph{display:grid}
+.opt-age-ph-ic{font-size:36px;line-height:1;filter:drop-shadow(0 2px 6px rgba(20,60,140,.12))}
+.opt-age-bottom{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 4px}
+.opt-age-bottom .tx{flex:1;font-size:16px;font-weight:700;color:var(--ink);text-align:left}
+.opt-age:hover:not(:disabled) .opt-age-img-wrap img,.opt-age:hover:not(:disabled) .opt-age-ph,.opt-age:active:not(:disabled) .opt-age-img-wrap img,.opt-age:active:not(:disabled) .opt-age-ph{transform:scale(1.02)}
+.opt-age.sel .opt-age-img-wrap{box-shadow:0 0 0 2px var(--ac)}
+
+/* === ABA LATERAL DE ROLAGEM === */
+.scroll-tab{position:fixed;top:62%;transform:translateY(-50%);right:max(0px,env(safe-area-inset-right));width:28px;height:104px;border-radius:14px 0 0 14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1.5px solid var(--line);border-right:none;box-shadow:0 4px 16px rgba(20,60,140,.12);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:8px 2px 7px;cursor:pointer;z-index:99;touch-action:manipulation;pointer-events:auto;transition:opacity .2s ease,transform .2s ease;color:var(--ac);box-sizing:border-box}
+@media(min-width:620px){.scroll-tab{right:max(12px,calc(50vw - 320px));border-radius:14px;border-right:1.5px solid var(--line)}}
+.scroll-tab:hover{background:#fff;border-color:var(--ac);box-shadow:0 6px 20px rgba(31,107,242,.2)}
+.scroll-tab-chevrons{display:flex;flex-direction:column;align-items:center}
+.scroll-tab-arrow{display:block;color:var(--ac);animation:scrollWave 1.6s ease-in-out infinite}
+.scroll-tab-arrow.a2{animation-delay:.3s;margin-top:-3px}
+@keyframes scrollWave{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(5px);opacity:1}}
+.scroll-tab-track{width:2.5px;height:24px;background:rgba(31,107,242,.15);border-radius:99px;overflow:hidden;position:relative;margin:3px 0}
+.scroll-tab-fill{width:100%;height:0%;background:var(--ac);border-radius:99px;transition:height .1s linear}
+.scroll-tab-txt{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--acd);line-height:1;writing-mode:vertical-rl;text-orientation:upright;user-select:none;-webkit-user-select:none}
+.scroll-fade{position:fixed;bottom:0;left:0;right:0;height:48px;background:linear-gradient(to bottom,rgba(234,242,255,0) 0%,rgba(234,242,255,.95) 100%);pointer-events:none;z-index:85;transition:opacity .2s ease}
+.scroll-tab-hidden,.scroll-fade-hidden{opacity:0!important;pointer-events:none!important;transform:translateY(-50%) translateX(10px)}
+
+/* === BOTÕES === */
+.btn{display:block;width:100%;padding:17px;border:0;border-bottom:5px solid var(--acd);border-radius:14px;font:inherit;font-weight:800;font-size:17px;background:linear-gradient(135deg,#1f6bf2,#3b82f6);color:#fff;cursor:pointer;text-align:center;text-decoration:none;transition:all .2s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(31,107,242,.3)}
+.btn:active{transform:translateY(3px);border-bottom-width:2px}
+.btn.sec{background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-bottom-width:4px;margin-top:12px}
+.btn.sec:hover{background:#fff;border-color:var(--ac)}
+.btn.cta-main{font-size:19px;padding:20px;background:linear-gradient(135deg,#16a870,#0d9460);border-bottom-color:#0a7a4d;letter-spacing:-.01em;animation:ctaPulse 3s ease-in-out infinite}
+@keyframes ctaPulse{0%,100%{box-shadow:0 4px 20px rgba(22,168,112,.2)}50%{box-shadow:0 8px 40px rgba(22,168,112,.4)}}
+
+/* === FOCUS === */
+:focus-visible{outline:3px solid #7fb2ff;outline-offset:2px}
+
+/* === FEEDBACK === */
+.fb{margin:4px 0 14px;padding:16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:15px;animation:up .35s cubic-bezier(.4,0,.2,1)}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.fb-tip{font-size:13px;color:var(--acd);margin-top:6px;font-weight:600;display:block}
+
+/* === TAGS === */
+.tag{display:inline-block;background:#e3eeff;border-radius:99px;padding:5px 14px;font-size:13px;font-weight:700;color:var(--acd)}
+.tag.hot{background:var(--red);color:#fff;animation:tagPulse 2s ease-in-out infinite}
+@keyframes tagPulse{0%,100%{opacity:1}50%{opacity:.8}}
+
+/* === NÍVEL === */
+.lvl{font-size:38px;font-weight:900;letter-spacing:-.03em;text-align:center;margin:0}
+
+/* === CHIPS === */
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.chip{border-radius:99px;padding:6px 14px;font-size:13px;font-weight:700;opacity:0;animation:pp .4s forwards}
+.chip.g{background:#e3f7ee;color:#0d7a52}.chip.r{background:#fff0e0;color:#a85a00}
+
+/* === GRÁFICOS SVG === */
+svg{width:100%;height:auto;display:block}
+.dr{stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1.6s .2s ease-out forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.pop{opacity:0;animation:pp .4s 1.5s forwards}
+@keyframes pp{to{opacity:1}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pl 1.6s 1.8s infinite}
+@keyframes pl{50%{transform:scale(1.7);opacity:.4}}
+
+/* === MARCADOR DO CAMINHO === */
+.rise-wrap{position:relative}
+.rise-marker{position:absolute;width:13px;height:13px;transform:translate(-50%,-50%) scale(0.6);opacity:0;pointer-events:none;z-index:2;animation:markerScale .25s 1.8s cubic-bezier(.34,1.56,.64,1) forwards}
+.rise-dot{width:13px;height:13px;background:var(--ac);border:3px solid #fff;border-radius:50%;box-shadow:0 2px 8px rgba(31,107,242,.4);box-sizing:border-box}
+.rise-pulse-ring{position:absolute;inset:-8px;border-radius:50%;background:rgba(31,107,242,.25);pointer-events:none;animation:ringPulse 2.4s 2.05s ease-out infinite}
+@keyframes ringPulse{0%{transform:scale(0.7);opacity:0.8}50%{transform:scale(1.85);opacity:0}100%{transform:scale(1.85);opacity:0}}
+@keyframes markerScale{from{transform:translate(-50%,-50%) scale(0.6);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
+.rise-chip{position:absolute;background:#ffffff;border:1.5px solid var(--ac);border-radius:99px;padding:5px 12px;font-size:13.5px;font-weight:700;color:var(--ink);white-space:nowrap;box-shadow:0 4px 14px rgba(20,60,140,.1);transform:translate(calc(-75% + var(--chip-shift,0px)), -100%);margin-top:-11px;opacity:0;pointer-events:none;z-index:3;animation:chipFade .2s 2.05s ease-out forwards}
+.rise-chip-tip{position:absolute;bottom:-5px;left:75%;width:7px;height:7px;background:#fff;border-right:1.5px solid var(--ac);border-bottom:1.5px solid var(--ac);transform:translateX(calc(-50% + var(--tip-shift,0px))) rotate(45deg)}
+@keyframes chipFade{from{opacity:0}to{opacity:1}}
+@media(max-width:350px){.rise-chip{padding:4px 8px;font-size:13px}}
+
+/* === PROVA SOCIAL ESPECIALISTAS === */
+.card-social-img{background:#fff;border:1px solid rgba(255,255,255,.8);border-radius:20px;padding:0;overflow:hidden;box-shadow:var(--shadow);margin-bottom:10px}
+.card-social-img img{display:block;width:100%;height:auto;max-width:592px;margin:0 auto}
+.social-caption{font-size:12px;color:#405070;line-height:1.45;margin:0 0 14px}
+.social-bridge{font-size:15px;font-weight:700;color:var(--ink);line-height:1.4;margin:12px 0 16px}
+
+/* === CHECKLIST === */
+ul.ck{list-style:none;padding:0;margin:10px 0}
+ul.ck li{padding-left:28px;position:relative;margin:10px 0;line-height:1.4}
+ul.ck li:before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
+
+/* === PREÇO === */
+.de{color:var(--mut);text-decoration:line-through;text-align:center;font-size:18px}
+.por{font-size:44px;font-weight:900;letter-spacing:-.03em;text-align:center;color:var(--ok)}
+.preco-box{background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:2px solid #bbf7d0;border-radius:18px;padding:20px;margin:16px 0;text-align:center}
+
+
+/* === SMALL === */
+.small{font-size:12px;color:var(--mut)}
+
+/* === FOOTER === */
+footer{margin-top:24px;text-align:center}footer a{color:var(--mut);margin:0 8px;text-decoration:none;transition:color .2s}footer a:hover{color:var(--ac)}
+
+/* === MÓDULOS (premium) === */
+.mod-section{margin:20px 0}
+.mod-section h3{font-size:15px;color:var(--acd);text-align:center;font-weight:800;margin:0 0 10px;text-transform:uppercase;letter-spacing:.05em}
+.mod-not-pdf{text-align:center;font-size:13.5px;line-height:1.45;color:#1e3a5f;background:linear-gradient(135deg,#eff6ff,#e0ecff);border:1px solid #bfdbfe;border-radius:12px;padding:10px 14px;margin:0 0 12px;font-weight:500}
+.mod-not-pdf strong{color:var(--acd);font-weight:800}
+.mod-pills{display:flex;justify-content:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.mod-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--line);color:var(--acd);padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700;box-shadow:0 2px 8px rgba(20,60,140,.04)}
+.mod-card{border:1.5px solid var(--line);border-radius:18px;margin:12px 0;background:var(--surface);overflow:hidden;transition:all .3s;position:relative}
+.mod-card:hover{box-shadow:var(--shadow)}
+.mod-card.recommended{border-color:var(--ac);border-width:2px;background:linear-gradient(135deg,rgba(31,107,242,.02),rgba(31,107,242,.06))}
+.mod-card.recommended::before{content:"⭐ RECOMENDADO PARA VOCÊ";position:absolute;top:0;right:0;background:linear-gradient(135deg,var(--ac),#3b82f6);color:#fff;font-size:10px;font-weight:800;padding:4px 12px;border-radius:0 16px 0 12px;letter-spacing:.04em}
+.mod-header{display:flex;align-items:center;gap:14px;padding:16px;cursor:pointer;list-style:none}
+.mod-header::-webkit-details-marker{display:none}
+.mod-num{font-weight:900;color:var(--ac);font-size:22px;width:38px;height:38px;display:grid;place-items:center;background:#e3eeff;border-radius:10px;flex-shrink:0}
+.mod-info{flex:1;min-width:0}
+.mod-info b{display:block;font-size:16px;line-height:1.3;color:var(--ink)}
+.mod-info .mod-benefit{display:block;font-size:13px;color:var(--mut);margin-top:2px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mod-count{display:inline-block;font-size:11.5px;font-weight:700;color:var(--ac);background:#eef4ff;border:1px solid #dbeafe;padding:2px 8px;border-radius:6px;margin-top:4px}
+.mod-arrow{font-size:22px;color:var(--mut);transition:transform .2s;flex-shrink:0}
+details[open] .mod-arrow{transform:rotate(45deg)}
+.mod-body{padding:0 16px 16px}
+.mod-body .mod-desc{margin:0 0 10px;font-size:14px;color:var(--ink);line-height:1.5}
+.mod-aulas-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);margin:8px 0 6px}
+.mod-aulas-list{list-style:none;padding:0;margin:0 0 10px}
+.mod-aulas-list li{display:flex;align-items:center;gap:10px;padding:8px 12px;margin-bottom:6px;background:#f8faff;border:1px solid var(--line);border-radius:10px;font-size:13.5px;font-weight:600;color:var(--ink)}
+.mod-play-icon{font-size:10px;color:var(--ac);background:#e3eeff;width:22px;height:22px;display:grid;place-items:center;border-radius:6px;flex-shrink:0}
+.mod-aula-name{flex:1;line-height:1.3}
+.mod-body .mod-pain{font-size:13px;color:var(--acd);font-weight:600;font-style:italic;margin-top:8px;padding:8px 12px;background:#e3eeff;border-radius:10px}
+label.mod-want{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:700;color:var(--ac);margin-top:10px;cursor:pointer;padding:8px 12px;background:#f0f7ff;border-radius:10px;transition:background .2s}
+label.mod-want:hover{background:#e3eeff}
+
+/* === DEPOIMENTOS === */
+.scroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;margin-bottom:14px;-webkit-overflow-scrolling:touch}
+.scroll::-webkit-scrollbar{height:4px}
+.scroll::-webkit-scrollbar-track{background:transparent}
+.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.dep{flex:0 0 85%;scroll-snap-align:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);position:relative}
+.dep::before{content:"“";position:absolute;top:10px;right:16px;font-size:48px;color:var(--ac);opacity:.15;font-family:Georgia,serif;line-height:1}
+.dep .dep-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.dep img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--line)}
+.dep img.pr{width:100%;height:auto;border-radius:12px;margin-top:10px;border:1px solid var(--line)}
+.av{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#3b82f6);color:#fff;font-weight:800;font-size:20px;flex-shrink:0}
+.dep .dep-meta{flex:1}
+.dep .dep-meta b{display:block;font-size:15px}
+.dep small{display:block;color:var(--mut);font-size:13px}
+.dep .dep-text{font-size:14px;color:var(--ink);line-height:1.5;margin:0 0 10px;font-style:italic}
+.dep .dep-result{display:inline-block;background:#e3f7ee;color:#0d7a52;border-radius:99px;padding:4px 12px;font-size:12px;font-weight:700}
+
+/* === GARANTIA === */
+.garantia-box{background:linear-gradient(135deg,var(--gold-bg),#fef3c7);border:2px solid var(--gold-bdr);border-radius:18px;padding:18px;margin:16px 0;text-align:center}
+.garantia-box .shield{font-size:36px;margin-bottom:6px}
+.garantia-box b{display:block;font-size:16px;color:#92400e}
+.garantia-box p{font-size:13px;color:#78350f;margin:4px 0 0}
+
+/* === SOCIAL PROOF COUNTER === */
+.social-counter{display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0;padding:10px;background:rgba(22,168,112,.06);border:1px solid rgba(22,168,112,.15);border-radius:12px;font-size:13px;font-weight:600;color:var(--ok)}
+.social-counter .dot{width:8px;height:8px;background:var(--ok);border-radius:50%;animation:dotPulse 1.5s ease-in-out infinite}
+@keyframes dotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+/* === STAT CARD === */
+.stat .big{font-size:44px;font-weight:900;letter-spacing:-.03em;color:var(--ac);text-align:center}
+
+/* === BÔNUS (cartões em coluna) === */
+.bonus-section-title{font-size:20px;font-weight:800;text-align:center;letter-spacing:-.02em;margin:0 0 14px;color:var(--ink)}
+.bonus-list{display:flex;flex-direction:column;gap:14px;margin:12px 0}
+.bonus-card{background:#ffffff;border:1.5px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 4px 16px rgba(20,60,140,.05);display:flex;flex-direction:column;transition:all .2s ease}
+.bonus-card:hover{border-color:#fed7aa;box-shadow:0 8px 24px rgba(234,88,12,.12);transform:translateY(-2px)}
+.bonus-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bonus-icon-box{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#f59e0b,#ea580c);display:grid;place-items:center;font-size:22px;color:#fff;box-shadow:0 4px 12px rgba(234,88,12,.22);flex-shrink:0}
+.bonus-pill{display:inline-block;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:99px}
+.bonus-title{display:block;font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.35;margin:10px 0 4px}
+.bonus-desc{font-size:13.5px;color:var(--mut);line-height:1.45;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* === APP DEMO & BÔNUS EXCLUSIVO === */
+.bonus-card-app{border:1.5px solid #bfdbfe;background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);box-shadow:0 8px 30px rgba(31,107,242,.08);overflow:hidden;padding:20px}
+.app-demo-cue{display:block;text-align:center;background:#eff6ff;border:1px dashed #93c5fd;border-radius:12px;padding:8px 12px;margin:12px 0 16px;font-size:12.5px;font-weight:700;color:#0060F8;line-height:1.4}
+.app-demo-note{font-size:12px;color:var(--mut);text-align:center;margin:12px 0 0;line-height:1.4}
+
+.phone-frame{position:relative;width:100%;max-width:336px;margin:0 auto;background:#071A4D;border-radius:36px;padding:10px;box-shadow:0 20px 45px -10px rgba(7,26,77,.35),0 0 0 1px rgba(0,0,0,.08);box-sizing:border-box;overflow:hidden;user-select:none}
+.phone-screen{background:linear-gradient(180deg,#EAF2FF 0%,#D8E8FF 100%);border-radius:26px;overflow:hidden;position:relative;min-height:510px;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px rgba(0,96,248,.08)}
+.phone-notch{width:76px;height:18px;background:#071A4D;border-radius:20px;margin:6px auto 4px;display:flex;align-items:center;justify-content:center;gap:6px;z-index:10;flex-shrink:0}
+.phone-notch-dot{width:7px;height:7px;border-radius:50%;background:#0B2568}
+
+.phone-top-bar{display:flex;align-items:center;justify-content:space-between;padding:6px 12px 8px;border-bottom:1px solid rgba(0,96,248,.1);background:#ffffff;flex-shrink:0}
+.phone-logo{height:22px;width:auto;object-fit:contain}
+.phone-stats{display:flex;align-items:center;gap:4px}
+.phone-pill{border-radius:999px;padding:3px 7px;font-size:11px;font-weight:700;display:inline-flex;align-items:center;gap:2px}
+.phone-pill-streak{background:#FFEDD5;color:#9A3412;border:1px solid rgba(154,52,18,.15)}
+.phone-pill-xp{background:#EAF2FF;color:#0060F8;border:1px solid rgba(0,96,248,.18)}
+.phone-pill-doors{background:#DCFCE7;color:#14532D;border:1px solid rgba(20,83,45,.15)}
+.phone-pro{background:#071A4D;color:#fff;font-size:9.5px;font-weight:900;letter-spacing:.05em;padding:3px 8px;border-radius:999px}
+
+.phone-views-wrapper{position:relative;flex:1;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;max-height:520px}
+.phone-views-wrapper::-webkit-scrollbar{width:4px}
+.phone-views-wrapper::-webkit-scrollbar-track{background:transparent}
+.phone-views-wrapper::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+
+#phone-trail-view{padding:12px 12px 18px}
+.phone-track-card{background:#ffffff;border-radius:18px;border:1px solid rgba(0,96,248,.08);padding:12px;box-shadow:0 4px 14px rgba(7,26,77,.05);margin-bottom:14px}
+.phone-track-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.track-tag{display:inline-flex;align-items:center;gap:4px;background:#DCFCE7;border:1px solid rgba(20,83,45,.15);color:#14532D;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.track-count{font-size:11px;font-weight:700;color:#4B5B76;white-space:nowrap}
+.phone-pbar-bg{width:100%;height:6px;background:#EAF2FF;border-radius:999px;overflow:hidden;margin-top:6px}
+.phone-pbar-fill{height:100%;width:0%;background:linear-gradient(90deg,#0060F8,#1FA870);border-radius:999px;transition:width .4s cubic-bezier(0.4,0,0.2,1)}
+
+.phone-trail-doors{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px;padding:8px 0 14px}
+.phone-trail-doors::before{content:"";position:absolute;top:35px;bottom:35px;left:50%;transform:translateX(-50%);width:2px;border-left:2px dashed #93C5FD;z-index:1}
+.door-node{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:100%}
+.door-graphic-btn{background:none;border:none;padding:0;cursor:pointer;outline:none;-webkit-tap-highlight-color:transparent;display:flex;justify-content:center}
+.door-svg{display:block}
+
+/* Real App Door Container & Opening Animation */
+.door-container{position:relative;display:inline-flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.door-container.door-current:hover{transform:translateY(-3px) scale(1.02)}
+.door-opening-anim .door-light-beam{animation:beamGlowExpand 1.2s cubic-bezier(.16,1,.3,1) forwards;transform-origin:center center}
+.door-opening-anim .door-leaf-open{animation:doorSwingOpen 1.2s cubic-bezier(.2,.8,.2,1) forwards;transform-origin:14px 50px}
+@keyframes beamGlowExpand{0%{opacity:0;transform:scale(.6)}40%{opacity:.6;transform:scale(1.05)}to{opacity:1;transform:scale(1)}}
+@keyframes doorSwingOpen{0%{transform:scaleX(1);opacity:.9}30%{transform:scaleX(.7) skewY(-6deg)}to{transform:scaleX(1) skewY(0);opacity:1}}
+
+.door-badge-num{position:absolute;top:-8px;color:#ffffff;font-size:11px;font-weight:800;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;box-shadow:0 2px 5px rgba(7,26,77,.18);z-index:3}
+.door-badge-current{background:#0060F8}
+.door-badge-open{background:#1FA870}
+.door-badge-locked{background:#94A3B8}
+
+.door-pill{display:flex;flex-direction:column;align-items:center;justify-content:center;width:88%;max-width:240px;margin-top:8px;padding:7px 10px;border-radius:14px;text-align:center;cursor:pointer;transition:all .2s ease;font-family:inherit;-webkit-tap-highlight-color:transparent;border:1.5px solid transparent}
+.door-pill .pill-badge{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+.door-pill .pill-title{font-size:11.5px;font-weight:700;line-height:1.25}
+.door-pill-active{background:#071A4D;color:#ffffff;border-color:#0060F8;box-shadow:0 4px 14px rgba(7,26,77,.22);animation:pulseDoor 2s infinite}
+@keyframes pulseDoor{0%,100%{box-shadow:0 4px 14px rgba(7,26,77,.22)}50%{box-shadow:0 6px 18px rgba(0,96,248,.45);transform:translateY(-1px)}}
+.door-pill-done{background:#DCFCE7;color:#14532D;border-color:#86EFAC;box-shadow:0 4px 12px rgba(20,83,45,.12)}
+.door-pill-locked{background:#ffffff;color:#4B5B76;border-color:rgba(0,96,248,.08);box-shadow:0 2px 6px rgba(7,26,77,.04)}
+.door-pill-locked:hover{border-color:#cbd5e1;background:#f8fafc}
+.door-restart-btn{background:none;border:none;color:#0060F8;font-size:11px;font-weight:700;cursor:pointer;margin-top:6px;padding:3px 8px;text-decoration:underline}
+
+#phone-act-view{padding:12px 12px 16px;display:none;flex-direction:column;gap:10px;animation:actSlideIn .25s ease}
+@keyframes actSlideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.phone-act-back{background:#ffffff;border:1px solid rgba(0,96,248,.15);border-radius:8px;padding:4px 8px;font-size:11px;font-weight:700;color:#071A4D;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.phone-act-badge{background:#FFEDD5;border:1px solid rgba(154,52,18,.15);border-radius:999px;padding:2px 8px;font-size:10px;font-weight:800;color:#9A3412}
+
+.phone-scenario-card{background:#ffffff;border:1px solid rgba(0,96,248,.08);border-radius:16px;padding:10px 12px;box-shadow:0 2px 8px rgba(7,26,77,.04)}
+.scenario-recruiter{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.scenario-avatar{width:28px;height:28px;border-radius:50%;background:#EAF2FF;display:grid;place-items:center;font-size:15px;border:1.5px solid #BFDBFE}
+.scenario-bubble{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:8px 10px}
+.bubble-en{font-size:12px;font-weight:700;color:#14532D;line-height:1.35;margin:0 0 3px}
+.bubble-pt{font-size:10.5px;color:#15803D;margin:0;font-style:italic}
+.phone-act-prompt{font-size:11.5px;font-weight:700;color:#4B5B76;margin:2px 0 0;line-height:1.3}
+
+.act-options-list{display:flex;flex-direction:column;gap:8px}
+.act-opt{width:100%;text-align:left;background:#ffffff;border:1.5px solid rgba(0,96,248,.12);border-radius:14px;padding:9px 10px;display:flex;align-items:flex-start;gap:8px;cursor:pointer;transition:all .15s ease;font-family:inherit;font-size:11.5px;line-height:1.35;color:#0B1736;-webkit-tap-highlight-color:transparent}
+.act-opt:hover{border-color:#0060F8;background:#F8FAFC}
+.act-opt.selected-correct{border-color:#1FA870;background:#DCFCE7;box-shadow:0 0 0 1px #1FA870}
+.act-opt.selected-wrong{border-color:#E53935;background:#FEECEB;box-shadow:0 0 0 1px #E53935}
+.act-opt .opt-letter{width:20px;height:20px;border-radius:6px;background:#F1F5F9;display:grid;place-items:center;font-size:10.5px;font-weight:800;color:#4B5B76;flex-shrink:0}
+.act-opt.selected-correct .opt-letter{background:#1FA870;color:#fff}
+.act-opt.selected-wrong .opt-letter{background:#E53935;color:#fff}
+
+.act-fb{border-radius:14px;padding:10px 12px;font-size:11.5px;line-height:1.4;display:none;animation:fbIn .2s ease}
+@keyframes fbIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.act-fb-ok{background:#DCFCE7;border:1.5px solid #86EFAC;color:#14532D}
+.act-fb-err{background:#FEECEB;border:1.5px solid #FCA5A5;color:#991B1B}
+.act-btn-retry{background:#ffffff;border:1px solid #FCA5A5;border-radius:8px;padding:5px 10px;font-size:11px;font-weight:700;color:#991B1B;cursor:pointer;margin-top:6px;display:inline-block}
+.act-btn-complete{background:#0060F8;border:none;border-radius:10px;padding:8px 14px;font-size:11.5px;font-weight:800;color:#ffffff;cursor:pointer;margin-top:6px;display:inline-flex;align-items:center;gap:4px;box-shadow:0 3px 10px rgba(0,96,248,.3)}
+
+.phone-modal-overlay{position:absolute;inset:0;background:rgba(7,26,77,.65);backdrop-filter:blur(2px);z-index:50;display:none;align-items:flex-end;justify-content:center}
+.phone-modal-overlay.active{display:flex;animation:overlayFadeIn .2s ease}
+@keyframes overlayFadeIn{from{opacity:0}to{opacity:1}}
+.phone-modal-card{background:#ffffff;width:100%;border-radius:22px 22px 0 0;padding:16px 14px 14px;box-shadow:0 -8px 24px rgba(7,26,77,.2);animation:sheetUp .25s cubic-bezier(0.16,1,0.3,1);max-height:88%;overflow-y:auto;text-align:center}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal-lock-badge{width:44px;height:44px;border-radius:50%;background:#EAF2FF;border:2px solid #BFDBFE;display:grid;place-items:center;font-size:20px;margin:0 auto 8px}
+.modal-cta-btn{display:block;width:100%;background:linear-gradient(135deg,#0060F8,#004ECC);color:#fff;font-size:12px;font-weight:800;padding:10px;border-radius:10px;text-decoration:none;box-shadow:0 4px 14px rgba(0,96,248,.35);box-sizing:border-box;text-align:center}
+.modal-close-btn{background:none;border:none;color:#4B5B76;font-size:11px;font-weight:600;padding:6px;cursor:pointer;margin-top:4px}
+
+@media(max-width:360px){
+  .phone-frame{max-width:100%;border-radius:28px;padding:8px}
+  .phone-screen{border-radius:22px}
+  .phone-pill{padding:2px 4px;font-size:10px}
+  .phone-top-bar{padding:5px 8px 8px}
+  .act-opt{font-size:11px;padding:8px 9px}
+}
+
+/* === URGENCY BAR (NAVY BLUE CARD) === */
+.urgency-bar{background:linear-gradient(135deg,#071A4D 0%,#0A2C80 100%);color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px 20px;margin:18px 0;box-shadow:0 8px 24px rgba(7,26,77,.2);text-align:center}
+.urgency-head{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+.urgency-icon{display:inline-flex;align-items:center;justify-content:center;color:#93C5FD;flex-shrink:0}
+.urgency-title{color:#ffffff;font-size:19px;font-weight:800;margin:0;letter-spacing:-.02em;line-height:1.25}
+.urgency-sub{font-size:13.5px;font-weight:500;color:#C9DAFF;line-height:1.45;margin:0}
+.urgency-progress{height:7px;background:rgba(255,255,255,.15);border-radius:999px;overflow:hidden;margin:12px auto 6px;max-width:320px}
+.urgency-pbar-fill{height:100%;background:linear-gradient(90deg,#38BDF8,#0060F8);border-radius:999px;transition:width .4s ease}
+.urgency-progress-text{font-size:12.5px;font-weight:600;color:#C9DAFF;margin-top:4px}
+
+/* === SEPARATOR === */
+.sep{height:1px;background:var(--line);margin:20px 0}
+
+/* === OFFER HERO === */
+.offer-hero{background:linear-gradient(135deg,#0b1b3a,#1e3a5f);border-radius:20px;padding:24px 20px;color:#fff;text-align:center;margin-bottom:16px}
+.offer-hero h2{color:#fff;margin-bottom:8px}
+.offer-hero p{color:rgba(255,255,255,.75);font-size:14px;margin:0}
+.offer-hero .offer-tag{display:inline-block;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:5px 14px;font-size:12px;font-weight:700;color:#fff;margin-bottom:12px}
+
+/* === RESULT INSIGHT === */
+.insight{background:linear-gradient(135deg,#eff6ff,#e3eeff);border:1.5px solid rgba(31,107,242,.15);border-radius:14px;padding:16px;margin:14px 0;font-size:14px}
+.insight b{color:var(--acd)}
+
+/* === FAQ (PERGUNTAS FREQUENTES) === */
+.faq-card{background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:20px;margin-top:16px;box-shadow:var(--shadow)}
+.faq-title{font-size:20px;font-weight:800;text-align:center;margin:0 0 14px;letter-spacing:-.02em;color:var(--ink)}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{border:1.5px solid var(--line);border-radius:18px;background:#ffffff;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.faq-item:hover{border-color:var(--ac);box-shadow:0 4px 14px rgba(20,60,140,.06)}
+.faq-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;cursor:pointer;list-style:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.faq-summary::-webkit-details-marker{display:none}
+.faq-summary::-moz-list-bullet{list-style-type:none}
+.faq-q{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.35;flex:1}
+.faq-icon{font-size:22px;font-weight:600;color:var(--mut);line-height:1;width:24px;height:24px;display:grid;place-items:center;transition:transform .25s ease,color .2s;flex-shrink:0}
+details[open] .faq-icon{transform:rotate(45deg);color:var(--ac)}
+.faq-item[open]{border-color:rgba(31,107,242,.35)}
+.faq-a{padding:0 16px 14px;font-size:13.5px;color:#334155;line-height:1.5}
+.faq-a p{margin:0}
+
+/* === REDUCED MOTION === */
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.dr{stroke-dashoffset:0}.pop,.chip{opacity:1}.rise-marker{animation:markerScaleReduced .25s .4s forwards!important}.rise-chip{animation:chipFadeReduced .2s .65s forwards!important}.rise-pulse-ring{display:none!important;animation:none!important}.opt-age-img-wrap img,.opt-age-ph{transform:none!important;transition:none!important}.scroll-tab-arrow{animation:none!important;transform:none!important}.scroll-tab,.scroll-fade{transition:none!important}}
+@keyframes markerScaleReduced{from{transform:translate(-50%,-50%) scale(0.6);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
+@keyframes chipFadeReduced{from{opacity:0}to{opacity:1}}
+
+/* === VÍDEO INTERMEDIÁRIO === */
+.inter-title{font-size:26px;margin:.25em 0 .5em}
+.video-box{position:relative;height:min(52vh,520px);aspect-ratio:9/16;width:auto;margin:0 auto 10px;border-radius:24px;box-shadow:var(--shadow);overflow:hidden;background:#0b1b3a;display:flex;align-items:center;justify-content:center}
+.video-box video{width:100%;height:100%;object-fit:cover;border-radius:24px;display:block;cursor:pointer}
+.video-play-btn{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(11,27,58,.75);backdrop-filter:blur(8px);border:2px solid rgba(255,255,255,.85);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 32px rgba(0,0,0,.35);z-index:2;padding:0;transition:transform .2s,background .2s}
+.video-play-btn svg{width:30px;height:30px;margin-left:3px;display:block}
+.video-play-btn:hover{transform:scale(1.08);background:rgba(31,107,242,.85)}
+.video-sound-btn{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(11,27,58,.65);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.4);color:#fff;font-size:16px;display:grid;place-items:center;cursor:pointer;z-index:3;padding:0;transition:transform .2s}
+.video-sound-btn:hover{transform:scale(1.08)}
+.video-subtext{text-align:center;color:var(--mut);font-size:14px;font-weight:600;margin:6px 0 14px;line-height:1.35}
+.btn-pulse{animation:btnPulse 1s ease-in-out 2}
+@keyframes btnPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03);box-shadow:0 8px 30px rgba(31,107,242,.45)}}
+</style>
+<script src="https://utmizey.com.br/v3/pixel.js" data-utmizey-pixel="dbd3139e-80cb-4d79-952f-57e21133da04" defer></script>
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1471201201859881&ev=PageView&noscript=1"
+/></noscript>
+<div class="bg"><i></i><i></i><i></i></div>
+<main>
+<div id="app"></div>
+<footer class="small"><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#">Contato</a></footer>
+</main>
+<script>
+/* ===== CONFIGURAÇÃO: edite aqui ===== */
+const CFG={
+  CHECKOUT_URL:"https://ggcheckout.app/checkout/v5/dtb2HdH5sdXiTqYPZ9B8nx", /* cole o link do checkout */
+  OFFER_VALUE:39.99,           /* valor da oferta para o InitiateCheckout */
+  PRECO_DE:"R$ 274,99",        /* use "de" só se esse preço já foi ou será de fato praticado */
+  PRECO_POR:"R$ 39,99",
+  VAGAS:272,                   /* limite de vagas da turma; 0 esconde o bloco */
+  VAGAS_PREENCHIDAS:null,      /* null = sem barra de progresso; número = exibe barra real */
+  PESSOAS_TESTE_SEMANA:null,   /* null = não exibe contagem; número = exibe valor fixo real */
+  GARANTIA:"7 dias",
+  FORMATO_AULAS:"Aulas em vídeo", /* formato exibido na etiqueta de módulos */
+  VIDEO_URL:"https://pub-381dd310173b42cea18ea2f8a65c05ca.r2.dev/1021.mp4",
+  VIDEO_POSTER:"assets/capa-video.webp",
+  VIDEO_TEM_AUDIO:true,
+  /* Cada módulo: t = nome, d = descrição, benefit = benefício curto, pain = microcopy de dor, aulas = lista de aulas */
+  MODULOS:[
+    {t:"Se apresentar em inglês com segurança",d:"Domine a resposta para 'Tell me about yourself' com estrutura profissional: nome, experiência e objetivo. Nunca mais fique sem saber o que dizer nos primeiros 30 segundos.",benefit:"Causa uma primeira impressão forte e profissional",pain:"Os primeiros 30 segundos definem se o entrevistador vai te levar a sério.",aulas:["Estrutura da apresentação profissional","Prática guiada com exemplos reais"]},
+    {t:"Respostas prontas para as 10 perguntas mais comuns",d:"Aprenda exatamente o que responder nas perguntas que aparecem em 9 de cada 10 entrevistas. Modelos prontos que você adapta à sua realidade.",benefit:"Chega na entrevista com as respostas na ponta da língua",pain:"Quem treina as respostas certas não trava. Quem improvisa, trava.",aulas:["As 10 perguntas que mais caem","Modelos de resposta adaptáveis"]},
+    {t:"Entender o entrevistador sem travar",d:"Técnicas para compreender a pergunta mesmo quando não entende tudo. Aprenda a pedir para repetir de forma profissional, sem parecer perdido.",benefit:"Para de travar e mantém a conversa fluindo",pain:"Não entender a pergunta é o medo nº1. Aqui você resolve isso.",aulas:["Listening estratégico para entrevistas","Frases para pedir clarificação"]},
+    {t:"Vagas, currículo e LinkedIn em inglês",d:"Leia anúncios de vaga sem dúvida, monte o básico do seu currículo em inglês e ajuste seu LinkedIn para atrair recrutadores internacionais.",benefit:"Abre portas para vagas que você nem sabia que podia se candidatar",pain:"Quantas vagas boas você já deixou passar por causa do inglês?",aulas:["Como ler anúncios de vaga em inglês","Currículo e LinkedIn básico"]},
+    {t:"Simulado completo de entrevista",d:"Treino do começo ao fim: desde o 'Hello' até o 'Thank you'. Simula uma entrevista real para você chegar no dia sem surpresa.",benefit:"Treina como se fosse de verdade, acerta quando for",pain:"Quem ensaia chega mais confiante. Quem vai sem preparo, torce para dar certo.",aulas:["Simulado guiado passo a passo","Checklist pré-entrevista"]}
+  ],
+  /* PROVA SOCIAL: preencha apenas com depoimentos reais de alunos (vazio por padrão até coletar reais) */
+  DEPOIMENTOS:[],
+  /* PESQUISA (aba da frase central): preencha só com dado real */
+  PESQUISA:{valor:"",texto:"",fonte:"",url:"",ano:""},
+  BONUS:[
+    {ic:"💬",t:"Pacote de respostas prontas para entrevista",d:"Respostas para as perguntas mais comuns, para copiar e adaptar."},
+    {ic:"📄",t:"Modelo de currículo e LinkedIn em inglês",d:"Modelos para montar seu currículo e seu perfil em inglês básico."},
+    {ic:"📲",t:"APP Inglês que Abre Portas",d:"Uma experiência interativa para aprender inglês na prática, com módulos, etapas progressivas e desafios — além de todas as aulas em vídeo."}
+  ],
+  FAQ:[
+    {q:"Isso é um PDF?",a:"Não. É um curso com módulos e aulas para você assistir e praticar."},
+    {q:"Preciso saber inglês para começar?",a:"O foco é o inglês básico para entrevistas. Se você entende um pouco ou quase nada, dá para começar."},
+    {q:"O curso garante que vou conseguir um emprego?",a:"Não. Nenhum curso pode garantir contratação. O curso treina o inglês básico das entrevistas para você chegar mais preparado."},
+    {q:"Como funciona a garantia?",a:"Você tem 7 dias para testar. Se não gostar, pede o reembolso dentro desse prazo."},
+    {q:"As vagas são limitadas mesmo?",a:"Sim. A turma é limitada a 250 vagas. Quando acabarem, o acesso fecha."},
+    {q:"Como faço para comprar?",a:"Clique em \"Garantir minha vaga\" e conclua o pagamento na página de checkout."}
+  ]
+};
+const PH="O inglês básico pode ser um diferencial nas suas entrevistas.";
+const PH2="O inglês básico pode pesar na hora de ser chamado para uma entrevista.";
+const PH3="Você não precisa ser fluente. Precisa saber responder as perguntas certas.";
+
+/* ===== TELEMETRIA & META PIXEL HELPER ===== */
+const _pixelCounts={};
+const _sessionMemory=new Set();
+function _hasSessionKey(k){
+  try{return !!sessionStorage.getItem(k)}catch(_){return _sessionMemory.has(k)}
+}
+function _setSessionKey(k){
+  try{sessionStorage.setItem(k,"1")}catch(_){_sessionMemory.add(k)}
+}
+if(/[?&]pixel_debug=1\b/.test(location.search)){
+  try{console.log("[Pixel Debug] Evento disparado: PageView",{id:"1471201201859881"})}catch(_){}
+}
+function trackPixel(tipo,nome,params,opts){
+  const isDebug=/[?&]pixel_debug=1\b/.test(location.search);
+
+  if(opts&&opts.oncePerSession){
+    const key="pixel_"+nome;
+    if(_hasSessionKey(key))return;
+    _setSessionKey(key);
+  }
+  if(opts&&opts.oncePerStep!==undefined){
+    const key="pixel_step_"+opts.oncePerStep;
+    if(_hasSessionKey(key))return;
+    _setSessionKey(key);
+  }
+
+  _pixelCounts[nome]=(_pixelCounts[nome]||0)+1;
+
+  if(isDebug){
+    try{console.log(`[Pixel Debug] Evento disparado: ${nome} (disparo #${_pixelCounts[nome]})`,params||{})}catch(_){}
+  }
+
+  try{
+    if(window.fbq&&typeof window.fbq==="function"){
+      _internalTrack=true;
+      try{
+        if(tipo==="track"){
+          if(params)window.fbq("track",nome,params);
+          else window.fbq("track",nome);
+        }else{
+          if(params)window.fbq("trackCustom",nome,params);
+          else window.fbq("trackCustom",nome);
+        }
+      }finally{
+        _internalTrack=false;
+      }
+    }
+  }catch(_){}
+}
+const track=(e,params)=>trackPixel("trackCustom",e,params);
+
+/* ===== COORDENAÇÃO META PIXEL + UTMIZEY PIXEL ===== */
+let _pixelJsIcFiredAt=0;
+let _fallbackIcFiredAt=0;
+let _internalTrack=false;
+(function setupFbqCoordinator(){
+  const orig=window.fbq;
+  if(typeof orig!=="function"||orig.__coordinated)return;
+  const wrapped=function(cmd,ev,params,opts){
+    if(!_internalTrack&&cmd==="track"){
+      const isDebug=/[?&]pixel_debug=1\b/.test(location.search);
+      if(ev==="PageView"){
+        if(isDebug){
+          try{console.log("[Pixel Debug] PageView duplicado do UTMizey Pixel suprimido (já enviado no head)")}catch(_){}
+        }
+        return;
+      }
+      if(ev==="InitiateCheckout"){
+        const now=Date.now();
+        if(now-_fallbackIcFiredAt<1500){
+          if(isDebug){
+            try{console.log("[Pixel Debug] InitiateCheckout duplicado suprimido (já enviado no fallback)")}catch(_){}
+          }
+          return;
+        }
+        _pixelJsIcFiredAt=now;
+        if((!params||!Object.keys(params).length)&&typeof CFG.OFFER_VALUE==="number"){
+          params={content_name:"Inglês que Abre Portas",currency:"BRL",value:CFG.OFFER_VALUE};
+        }
+        _pixelCounts[ev]=(_pixelCounts[ev]||0)+1;
+        if(isDebug){
+          try{console.log(`[Pixel Debug] Evento disparado via UTMizey Pixel (com CAPI): ${ev} (disparo #${_pixelCounts[ev]})`,params||{},opts||{})}catch(_){}
+        }
+        return orig.call(this,cmd,ev,params,opts);
+      }
+      if(ev==="Lead"){
+        _setSessionKey("pixel_Lead");
+      }
+    }
+    return orig.apply(this,arguments);
+  };
+  wrapped.__coordinated=true;
+  const proxiedProps=new Set(["callMethod","queue","getState","push","loaded","version","instance"]);
+  for(const k of Object.keys(orig)){
+    if(!proxiedProps.has(k)&&!(k in wrapped))wrapped[k]=orig[k];
+  }
+  proxiedProps.forEach(prop=>{
+    try{
+      Object.defineProperty(wrapped,prop,{
+        configurable:true,
+        enumerable:true,
+        get(){return orig[prop]},
+        set(v){orig[prop]=v}
+      });
+    }catch(_){}
+  });
+  if(window._fbq===orig)window._fbq=wrapped;
+  window.fbq=wrapped;
+})();
+
+/* ===== CHECKOUT / REDIRECIONAMENTO SEGURO (GGCHECKOUT + UTMIZEY) ===== */
+let _checkoutRedirecting=false;
+let _lastCheckoutTrackAt=0;
+function applyUtmizeyParams(url){
+  try{
+    if(window.__utmizey&&typeof window.__utmizey.decorate==="function"){
+      return window.__utmizey.decorate(url);
+    }
+  }catch(_){}
+  return url;
+}
+function getGGCheckoutUrl(el){
+  if(!el)return null;
+  const href=el.getAttribute("href")||"";
+  const dataUrl=el.dataset?(el.dataset.checkoutUrl||el.dataset.checkout||el.dataset.href||el.dataset.url||el.dataset.link||""):"";
+  const url=href||dataUrl;
+  if(!url||url==="#"||url.startsWith("#"))return null;
+  if((CFG.CHECKOUT_URL&&CFG.CHECKOUT_URL!=="#"&&url.indexOf(CFG.CHECKOUT_URL)===0)||/ggcheckout/i.test(url)){
+    return url;
+  }
+  return null;
+}
+function handleGGCheckoutClick(e){
+  if(e.defaultPrevented)return;
+  if(e.type==="click"&&e.button!==0)return;
+  if(e.type==="auxclick"&&e.button!==1)return;
+
+  const targetEl=e.target&&e.target.closest?e.target.closest("a, button, [data-checkout-url], [data-checkout], [data-href], [data-url], [data-link]"):null;
+  const rawCheckoutUrl=getGGCheckoutUrl(targetEl);
+  if(!rawCheckoutUrl)return;
+
+  const checkoutUrl=applyUtmizeyParams(rawCheckoutUrl);
+  if(targetEl.tagName==="A"&&checkoutUrl!==rawCheckoutUrl){
+    try{targetEl.setAttribute("href",checkoutUrl);}catch(_){}
+  }
+
+  const opensNewTab=e.type==="auxclick"||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||targetEl.getAttribute("target")==="_blank";
+  if(_checkoutRedirecting){
+    if(!opensNewTab)e.preventDefault();
+    return;
+  }
+
+  const now=Date.now();
+  if(now-_lastCheckoutTrackAt<1000){
+    if(!opensNewTab)e.preventDefault();
+    return;
+  }
+  _lastCheckoutTrackAt=now;
+
+  const checkoutParams=typeof CFG.OFFER_VALUE==="number"
+    ?{content_name:"Inglês que Abre Portas",currency:"BRL",value:CFG.OFFER_VALUE}
+    :undefined;
+  const sentByUtmizeyPixel=(now-_pixelJsIcFiredAt)<500;
+  if(!sentByUtmizeyPixel){
+    _fallbackIcFiredAt=now;
+    trackPixel("track","InitiateCheckout",checkoutParams);
+  }
+
+  if(!opensNewTab){
+    e.preventDefault();
+    _checkoutRedirecting=true;
+    let done=false;
+    const nav=()=>{
+      if(!done){
+        done=true;
+        window.location.href=checkoutUrl;
+      }
+    };
+    setTimeout(nav,250);
+    setTimeout(()=>{_checkoutRedirecting=false;},3000);
+  }
+}
+document.addEventListener("click",handleGGCheckoutClick);
+document.addEventListener("auxclick",handleGGCheckoutClick);
+window.addEventListener("pageshow",()=>{_checkoutRedirecting=false;});
+const $=document.getElementById("app");
+
+/* ===== PROVA SOCIAL (CONTADOR) ===== */
+function socialCounterHTML(variant){
+  if(CFG.PESSOAS_TESTE_SEMANA===null||CFG.PESSOAS_TESTE_SEMANA===undefined)return "";
+  const count=CFG.PESSOAS_TESTE_SEMANA;
+  const texts={
+    quiz:`🔥 ${count} pessoas fizeram este teste nos últimos 7 dias`,
+    offer:`${count}+ pessoas já descobriram seu nível esta semana`,
+    result:`Mais de ${count} pessoas testaram seu inglês recentemente`
+  };
+  return `<div class="social-counter"><span class="dot"></span>${texts[variant]||texts.quiz}</div>`;
+}
+
+/* ===== BLOCO DE VAGAS REFINADO ===== */
+function urgencyBarHTML(){
+  if(!CFG.VAGAS||CFG.VAGAS<=0)return "";
+  const preenchidas=CFG.VAGAS_PREENCHIDAS;
+  const hasProg=preenchidas!==null&&preenchidas!==undefined&&typeof preenchidas==="number";
+  const clamped=hasProg?Math.min(CFG.VAGAS,Math.max(0,preenchidas)):null;
+  const pct=clamped!==null?Math.round((clamped/CFG.VAGAS)*100):null;
+
+  return `<div class="urgency-bar">
+    <div class="urgency-head">
+      <span class="urgency-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M14 11v.01"/>
+        </svg>
+      </span>
+      <h3 class="urgency-title">Turma limitada a ${CFG.VAGAS} vagas</h3>
+    </div>
+    <div class="urgency-sub">Quando as vagas acabarem, o acesso fecha e o preço volta ao normal.</div>
+    ${pct!==null?`
+    <div class="urgency-progress" role="progressbar" aria-valuenow="${clamped}" aria-valuemin="0" aria-valuemax="${CFG.VAGAS}" aria-label="Vagas preenchidas">
+      <div class="urgency-pbar-fill" style="width:${pct}%"></div>
+    </div>
+    <div class="urgency-progress-text">${clamped} de ${CFG.VAGAS} vagas preenchidas</div>
+    `:""}
+  </div>`;
+}
+
+/* ===== FAQ (PERGUNTAS FREQUENTES) ===== */
+function faqHTML(){
+  if(!CFG.FAQ||!CFG.FAQ.length)return "";
+  const items=CFG.FAQ.filter(item=>{
+    const isVagas=item.q.toLowerCase().includes("vagas");
+    if(isVagas&&(!CFG.VAGAS||CFG.VAGAS<=0))return false;
+    return true;
+  }).map(item=>{
+    let ans=item.a;
+    const isVagas=item.q.toLowerCase().includes("vagas");
+    if(isVagas&&CFG.VAGAS>0){
+      ans=ans.replace(/\b\d+\s*vagas\b/i,`${CFG.VAGAS} vagas`);
+    }
+    return `<details class="faq-item">
+      <summary class="faq-summary">
+        <span class="faq-q">${item.q}</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-a"><p>${ans}</p></div>
+    </details>`;
+  }).join("");
+
+  return `<div class="card faq-card">
+    <h2 class="faq-title">Perguntas frequentes</h2>
+    <div class="faq-list">${items}</div>
+  </div>`;
+}
+
+/* ===== PERGUNTAS (ic = ícones, sub = subtítulos, sk = habilidade) ===== */
+const OBJ={t:`Qual é o seu objetivo com o <span class="red">inglês que abre portas</span>?`,o:[`Me sair melhor nas entrevistas`,`Conseguir uma oportunidade de emprego melhor`],ic:[`🎯`,`🚀`],sub:[`Respostas prontas e segurança na hora H`,`Me candidatar a mais vagas com confiança`],fb:`Boa escolha. Vamos personalizar tudo para o seu objetivo.`,br:1};
+const SELF={t:`Como você avalia seu inglês hoje?`,o:[`Quase zero`,`Entendo um pouco`,`Me viro no básico`],ic:[`🌱`,`📘`,`💬`],fb:`Ótimo ponto de partida. Veja como você se sai na prática — as próximas perguntas simulam situações reais.`,fbtip:`Não se preocupe com erros. Eles mostram exatamente onde focar.`};
+const AGE={t:`Qual é a sua idade?`,o:[`Até 24 anos`,`25 a 34 anos`,`35 a 44 anos`,`45 anos ou mais`],ic:[`🎓`,`💼`,`📈`,`🏆`],fb:`Anotado. Isso nos ajuda a personalizar o seu resultado e as recomendações.`,tag:`idade`,photos:[[`idade-1-homem.webp`,`idade-1-mulher.webp`],[`idade-2-mulher.webp`,`idade-2-homem.webp`],[`idade-3-homem.webp`,`idade-3-mulher.webp`],[`idade-4-mulher.webp`,`idade-4-homem.webp`]]};
+const INFO={info:1},SOCIAL={info:1,social:1};
+const build=b=>[OBJ,SELF,AGE,...F[b],SOCIAL];
+const F={
+A:[
+{t:`Quando é a sua próxima entrevista?`,o:[`Esta semana`,`Nas próximas semanas`,`Ainda não marquei, mas estou me candidatando`],ic:[`⏰`,`📅`,`📨`],fb:`Anotado. As próximas perguntas simulam uma entrevista de verdade — responda como se estivesse lá.`,fbtip:`Cada resposta sua revela um ponto forte ou algo para treinar.`,tag:`urg`},
+{t:`O entrevistador diz: "Tell me about yourself." Qual resposta é a melhor?`,o:[`"My name Carla, I work sales two years."`,`"I'm Carla. I have two years of experience in sales, and I'm looking for a new challenge."`,`"I am Carla and I am liking sales."`,`"Me Carla. Sales. Two years."`,`"I'm Carla, I'm working in the sales for two years ago."`],c:1,sk:`Se apresentar`,ok:`Excelente! Nome, experiência e objetivo — essa estrutura funciona em qualquer entrevista. Você já sabe o básico.`,no:`Quase. A resposta forte tem nome + experiência + objetivo, nessa ordem. Com treino, isso vira automático.`,oktip:`Quem domina essa estrutura causa boa impressão nos primeiros 30 segundos.`,notip:`Esse é exatamente o tipo de coisa que se resolve com treino direcionado.`},
+{t:`O que mais te preocupa numa entrevista em inglês?`,o:[`Não entender a pergunta`,`Travar na hora de responder`,`Não saber falar da minha experiência`,`Errar a pronúncia`],ic:[`🤔`,`😶`,`🗣️`,`🔊`],fb:`Essa preocupação é mais comum do que você imagina — e é exatamente o que dá para resolver com preparo.`,fbtip:`${PH3}`,tag:`dor`},
+{t:`"Why do you want this job?" Qual resposta passa a melhor impressão?`,o:[`"I want this job because I like your company and I can learn a lot here."`,`"I want job because money."`,`"Because I need work."`,`"I want this job because is near of my house."`,`"Because my friend told me to apply."`],c:0,sk:`Falar da motivação`,ok:`Perfeito! Mostrar interesse na empresa e vontade de aprender — isso é o que os recrutadores querem ouvir.`,no:`O ideal é falar da empresa e do que você pode aprender e entregar. Respostas genéricas eliminam.`,oktip:`Quem prepara essa resposta se destaca de 90% dos candidatos.`,notip:`Esse erro elimina muita gente boa. A boa notícia: é fácil de corrigir.`},
+{t:`O entrevistador pergunta: "What are your strengths?" O que ele quer saber?`,o:[`Qual é o seu salário`,`Qual é a sua força física`,`Quanto tempo você é forte no trabalho`,`Quais são suas forças / pontos fortes`,`Se você tem alguma habilidade especial de luta`],c:3,sk:`Vocabulário de entrevista`,ok:`Muito bem! "Strengths" significa pontos fortes. É uma das perguntas mais comuns em entrevistas.`,no:`"Strengths" quer dizer pontos fortes. Essa palavra aparece em quase toda entrevista — vale decorar.`,oktip:`Quem sabe o vocabulário básico de entrevista já sai na frente de muita gente.`,notip:`Esse tipo de vocabulário é o que separa quem entende a entrevista de quem fica perdido.`},
+INFO,
+{t:`O entrevistador pergunta: "Can you start next Monday?" O que ele quer saber?`,o:[`Se você gostou da segunda-feira`,`Se você já trabalhou numa segunda-feira`,`Se você pode começar na próxima segunda-feira`,`Se segunda-feira é seu dia de folga`,`Se você prefere começar na segunda ou na terça`],c:2,sk:`Entender o entrevistador`,ok:`Perfeito! Uma boa resposta seria: "Yes, I can start next Monday." Simples e direto.`,no:`"Can you start next Monday?" é sobre a data de início. Entender esse tipo de frase faz toda a diferença.`,oktip:`Entender o entrevistador é metade da batalha. Você está no caminho certo.`,notip:`Esse tipo de frase aparece em toda entrevista. Com treino, vira automático.`},
+{t:`O recrutador diz: "Do you have any questions for us?" O que você deve responder?`,o:[`"No, I don't have questions."`,`"What time is the lunch?"`,`"How many days I can miss?"`,`"No, you already said everything for me."`,`"Yes, how is a typical day in this position?"`],c:4,sk:`Fechar a entrevista`,ok:`Ótimo! Fazer uma pergunta inteligente sobre a vaga mostra interesse real. Isso impressiona qualquer recrutador.`,no:`Quando o recrutador abre para perguntas, é sua chance de mostrar interesse. Pergunte sobre o dia a dia ou a equipe.`,oktip:`Essa pergunta final é onde os melhores candidatos se destacam. Você tem essa noção.`,notip:`Dizer "não tenho perguntas" é um dos erros mais comuns — e mais fáceis de corrigir.`}
+],
+B:[
+{t:`O que mais pesa na sua vontade de mudar de emprego?`,o:[`Salário`,`Crescimento na carreira`,`Trabalho remoto ou híbrido`,`Ambiente e qualidade de vida`],ic:[`💰`,`📈`,`🏠`,`🌿`],fb:`É um motivo legítimo. Agora vamos ver se o seu inglês está pronto para acompanhar esse objetivo.`,fbtip:`${PH2}`,tag:`mot`},
+{t:`Você vê no anúncio da vaga: "Basic English required." O que isso quer dizer?`,o:[`Inglês básico é exigido`,`Inglês básico é um diferencial, mas não é obrigatório`,`A vaga é só para estrangeiros`,`A empresa oferece curso de inglês`,`Inglês básico é opcional para essa vaga`],c:0,sk:`Ler a vaga`,ok:`Isso! "Required" significa obrigatório. Saber isso evita que você descarte vagas boas por engano.`,no:`"Required" significa obrigatório. Já "a plus" seria diferencial. Essa diferença muda tudo.`,oktip:`Quem entende os termos das vagas se candidata para mais posições certas.`,notip:`Muita gente boa perde vagas por não entender palavras simples como essa.`},
+{t:`Quando uma vaga pede inglês, o que você costuma fazer?`,o:[`Me candidato mesmo assim`,`Fico inseguro, mas penso em me candidatar`,`Normalmente nem me candidato`,`Nunca reparei`],ic:[`✅`,`😬`,`🚪`,`👀`],fb:`Entender onde você trava mostra exatamente por onde começar. Isso já é metade do caminho.`,fbtip:`Quantas oportunidades boas já passaram por causa dessa insegurança?`,tag:`cmp`},
+{t:`No LinkedIn, qual frase apresenta melhor a sua experiência?`,o:[`"I am three years in customer service."`,`"I have customer service three years."`,`"I have three years of experience in customer service."`,`"I work customer service since three years."`,`"Me, three years customer service."`],c:2,sk:`Falar da experiência`,ok:`Muito bem! "I have ... years of experience in ..." é a base de muitos currículos e perfis profissionais.`,no:`A forma correta é "I have three years of experience in customer service." É simples e muito poderosa.`,oktip:`Essa frase sozinha já melhora qualquer perfil no LinkedIn.`,notip:`Com a estrutura certa, qualquer experiência soa profissional em inglês.`},
+{t:`A vaga diz: "Competitive salary and benefits." O que isso significa?`,o:[`Competição de salário entre funcionários`,`Salário pago por competição`,`Benefícios apenas para os mais competitivos`,`Você precisa competir para receber o salário`,`Salário competitivo e benefícios`],c:4,sk:`Entender termos de vaga`,ok:`Perfeito! "Competitive salary" significa que o salário é bom em relação ao mercado. Esse vocabulário é essencial.`,no:`"Competitive salary and benefits" quer dizer salário competitivo (bom para o mercado) e benefícios. É uma expressão muito comum em vagas.`,oktip:`Saber ler vagas em inglês é o primeiro passo para se candidatar com confiança.`,notip:`Esses termos aparecem em quase toda vaga. Com o vocabulário certo, você para de perder oportunidades.`},
+INFO,
+{t:`O recrutador pergunta: "Why are you looking for a new job?" Qual resposta soa mais profissional?`,o:[`"My boss is bad."`,`"I'm looking for new challenges and opportunities to grow."`,`"I hate my job."`,`"Because my company don't pay me good."`,`"I need more money for my things."`],c:1,sk:`Responder ao recrutador`,ok:`Ótimo! Falar de desafios e crescimento passa uma imagem profissional e positiva.`,no:`Em entrevista, o ideal é falar do que você busca — não do que não gosta. Positividade contrata.`,oktip:`Recrutadores adoram candidatos que falam de crescimento. Você tem essa mentalidade.`,notip:`Pequenos ajustes na forma de responder mudam completamente a impressão que você causa.`},
+{t:`No e-mail do recrutador está escrito: "Please find attached my job offer." O que é "attached"?`,o:[`Atrasado`,`Atachado / grudado`,`Cancelado`,`Em anexo`,`Atacado (com desconto)`],c:3,sk:`Vocabulário profissional`,ok:`Exato! "Attached" significa em anexo. É uma das palavras mais usadas em e-mails profissionais em inglês.`,no:`"Attached" significa em anexo. Essa palavra aparece em praticamente todo e-mail profissional em inglês.`,oktip:`Quem entende e-mails profissionais em inglês transmite segurança desde o primeiro contato.`,notip:`Vocabulário de e-mail é tão importante quanto vocabulário de entrevista. E é simples de aprender.`}
+]};
+const S={flow:[],i:0,score:0,tags:{},res:[],ans:[],br:"A",cur:null};
+
+/* ===== COMPONENTES ===== */
+const head=(back,p)=>`<div class="top">${back?`<button id="bk" aria-label="Voltar">‹</button>`:`<span></span>`}<img src="logo.png" alt="Inglês que Abre Portas" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='assets/logo.png';}"><span></span></div>${p!=null?`<div class="bar"><i style="width:${p}%"></i></div>`:""}`;
+const line=`M30,128 C60,122 90,112 130,102 S170,86 210,72 S250,52 270,40 S290,28 298,22`;
+const NODES=[[30,128],[130,102],[210,72],[270,40]],GOAL=[298,22];
+const tip=(x,y,t,d=-34)=>{const w=t.length*6.4+16,tx=Math.min(Math.max(x-w/2,2),318-w);return `<g class="pop"><rect x="${tx}" y="${y+d}" width="${w}" height="22" rx="7" fill="#0b1b3a"/><text x="${tx+w/2}" y="${y+d+15}" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${t}</text></g>`};
+function chart(lv){const [x,y]=NODES[lv];return `<svg viewBox="0 0 320 170" role="img" aria-label="Seu nível atual e a meta"><path d="M10,148 H310" stroke="#dfe7f5" stroke-width="2"/><path class="dr" pathLength="1" d="${line}" fill="none" stroke="#1f6bf2" stroke-width="4" stroke-linecap="round"/>${NODES.map((n,k)=>`<circle cx="${n[0]}" cy="${n[1]}" r="5" fill="${k<=lv?"#1f6bf2":"#fff"}" stroke="#1f6bf2" stroke-width="2.5"/>`).join("")}<circle class="pop" cx="${GOAL[0]}" cy="${GOAL[1]}" r="6" fill="#e53946"/><circle class="pulse" cx="${x}" cy="${y}" r="9" fill="#1f6bf2" opacity=".35"/>${tip(x,y,"Você está aqui")}${tip(GOAL[0],GOAL[1],"Meta",16)}<text x="30" y="164" text-anchor="middle" font-size="11" fill="#5d6b8a">Iniciante</text><text x="130" y="164" text-anchor="middle" font-size="11" fill="#5d6b8a">Básico</text><text x="210" y="164" text-anchor="middle" font-size="11" fill="#5d6b8a">Intermediário</text><text x="270" y="164" text-anchor="middle" font-size="11" fill="#5d6b8a">Sólido</text></svg>`}
+const rise=(m=false)=>`<div class="rise-wrap" id="riseWrap"><svg id="riseSvg" viewBox="0 0 320 120"><path d="M10,110 H310" stroke="#dfe7f5" stroke-width="2"/><path id="risePath" class="dr" pathLength="1" d="M20,100 C90,96 140,66 200,50 S280,24 300,16" fill="none" stroke="#1f6bf2" stroke-width="5" stroke-linecap="round"/><polygon class="pop" points="312,10 290,12 302,28" fill="#1f6bf2"/></svg>${m?`<div id="riseMarker" class="rise-marker" aria-hidden="true"><div class="rise-pulse-ring"></div><div class="rise-dot"></div></div><div id="riseChip" class="rise-chip" role="status">Você está no caminho<span class="rise-chip-tip" aria-hidden="true"></span></div>`:""}</div>`;
+
+/* === DEPOIMENTOS === */
+const depo=()=>CFG.DEPOIMENTOS.length?`<div class="scroll">${CFG.DEPOIMENTOS.map(d=>`<div class="dep"><div class="dep-head">${d.img?`<img src="${d.img}" alt="">`:`<span class="av">${(d.nome||"?")[0]}</span>`}<div class="dep-meta"><b>${d.nome}</b><small>${d.detalhe||""}</small></div></div><p class="dep-text">"${d.texto}"</p>${d.resultado?`<span class="dep-result">✓ ${d.resultado}</span>`:""}${d.print?`<img class="pr" src="${d.print}" alt="Mensagem de aluno">`:""}
+</div>`).join("")}</div>`:"";
+
+const pesq=()=>{const p=CFG.PESQUISA;return p.texto?`<div class="card stat">${p.valor?`<div class="big">${p.valor}</div>`:""}<p class="c">${p.texto}</p><p class="small c">Fonte: ${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.fonte}</a>`:p.fonte}${p.ano?` (${p.ano})`:""}</p></div>`:""};
+
+/* === MÓDULOS RECOMENDADOS === */
+const REC={A:[[2],[1,4],[0],[4]],B:{1:[3],2:[3],0:[3]}};
+function mods(){
+  const r=S.br==="A"?(REC.A[S.tags.dor]||[]):(REC.B[S.tags.cmp]||[]);
+  const totMod=CFG.MODULOS.length;
+  const formato=CFG.FORMATO_AULAS||"Aulas em vídeo";
+  return `<div class="mod-section">
+    <h3>📚 O que você vai dominar</h3>
+    <p class="mod-not-pdf">Não é um PDF: é um curso com módulos e aulas para você assistir e praticar.</p>
+    <div class="mod-pills">
+      <span class="mod-pill">📦 ${totMod} ${totMod===1?"módulo":"módulos"}</span>
+      <span class="mod-pill">🎬 ${formato}</span>
+    </div>
+    ${CFG.MODULOS.map((m,i)=>{
+      const num=String(i+1).padStart(2,'0');
+      const numAulas=m.aulas?m.aulas.length:0;
+      const txtAulas=numAulas===1?"1 aula":`${numAulas} aulas`;
+      return `<details class="mod-card${r.includes(i)?" recommended":""}">
+      <summary class="mod-header">
+        <span class="mod-num">${num}</span>
+        <span class="mod-info">
+          <b>${m.t}</b>
+          <span class="mod-benefit">${m.benefit}</span>
+          <span class="mod-count">${txtAulas}</span>
+        </span>
+        <span class="mod-arrow">+</span>
+      </summary>
+      <div class="mod-body">
+        <p class="mod-desc">${m.d}</p>
+        <div class="mod-aulas-label">Aulas deste módulo:</div>
+        <ul class="mod-aulas-list">
+          ${m.aulas.map(a=>`<li><span class="mod-play-icon">▶</span><span class="mod-aula-name">${a}</span></li>`).join("")}
+        </ul>
+        <div class="mod-pain">💡 ${m.pain}</div>
+        <label class="mod-want"><input type="checkbox" class="want"> ✋ Quero dominar isso</label>
+      </div>
+    </details>`;
+    }).join("")}
+    <p class="small c" id="wc" style="margin-top:8px">Toque em um módulo para ver o conteúdo.</p>
+  </div>`;
+}
+
+/* === BÔNUS & APP INTERATIVO === */
+function renderDoorSVG(state, number, animateOpen=false){
+  return `<div class="door-container door-${state} ${animateOpen?'door-opening-anim':''}" style="width:76px;height:102px;">
+    <svg width="76" height="102" viewBox="0 0 100 135" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;overflow:visible;" class="door-svg">
+      <defs>
+        <radialGradient id="doorLightGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" stop-color="#FFF9E6" stop-opacity="1"/>
+          <stop offset="40%" stop-color="#FFE082" stop-opacity="0.85"/>
+          <stop offset="80%" stop-color="#FFB300" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#FF8F00" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="doorOpenGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFE082"/>
+          <stop offset="50%" stop-color="#FFCA28"/>
+          <stop offset="100%" stop-color="#FFA000"/>
+        </linearGradient>
+        <linearGradient id="doorCurrentGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3B8BFF"/>
+          <stop offset="100%" stop-color="#0060F8"/>
+        </linearGradient>
+        <linearGradient id="doorLockedGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#E2E8F0"/>
+          <stop offset="100%" stop-color="#CBD5E1"/>
+        </linearGradient>
+      </defs>
+      ${state==='open'||animateOpen?`
+        <g class="door-light-beam">
+          <ellipse cx="50" cy="75" rx="55" ry="60" fill="url(#doorLightGlow)" opacity="0.9"/>
+          <polygon points="50,15 10,135 90,135" fill="rgba(255, 236, 179, 0.45)"/>
+          <polygon points="50,15 0,110 100,110" fill="rgba(255, 213, 79, 0.25)"/>
+        </g>
+        <path d="M10 130 V50 C10 26 28 8 50 8 C72 8 90 26 90 50 V130" stroke="#FFB300" stroke-width="7" stroke-linecap="round"/>
+        <g class="door-leaf-open">
+          <path d="M14 126 V50 C14 30 30 14 50 14 C70 14 86 30 86 50 V126 Z" fill="#FFFDF5"/>
+          <path d="M14 126 V50 C14 30 24 20 32 26 V122 Z" fill="url(#doorOpenGrad)" stroke="#D97706" stroke-width="2"/>
+          <circle cx="28" cy="80" r="3.5" fill="#78350F"/>
+        </g>
+        <line x1="4" y1="130" x2="96" y2="130" stroke="#D97706" stroke-width="6" stroke-linecap="round"/>
+      `:state==='current'?`
+        <path d="M10 130 V50 C10 26 28 8 50 8 C72 8 90 26 90 50 V130" stroke="#0060F8" stroke-width="7" stroke-linecap="round"/>
+        <g class="door-leaf-closed">
+          <path d="M14 126 V50 C14 30 30 14 50 14 C70 14 86 30 86 50 V126 Z" fill="url(#doorCurrentGrad)"/>
+          <path d="M24 50 C24 36 35 25 50 25 C65 25 76 36 76 50 V68 H24 V50 Z" fill="rgba(255, 255, 255, 0.18)"/>
+          <rect x="24" y="76" width="52" height="42" rx="6" fill="rgba(255, 255, 255, 0.18)"/>
+          <circle cx="70" cy="80" r="4" fill="#FFFFFF"/>
+          <g transform="translate(40, 86)">
+            <polygon points="6,2 16,8 6,14" fill="#FFFFFF"/>
+          </g>
+        </g>
+        <line x1="4" y1="130" x2="96" y2="130" stroke="#004ECC" stroke-width="6" stroke-linecap="round"/>
+      `:`
+        <path d="M10 130 V50 C10 26 28 8 50 8 C72 8 90 26 90 50 V130" stroke="#94A3B8" stroke-width="7" stroke-linecap="round"/>
+        <g class="door-leaf-closed">
+          <path d="M14 126 V50 C14 30 30 14 50 14 C70 14 86 30 86 50 V126 Z" fill="url(#doorLockedGrad)"/>
+          <path d="M24 50 C24 36 35 25 50 25 C65 25 76 36 76 50 V68 H24 V50 Z" fill="rgba(255, 255, 255, 0.18)"/>
+          <rect x="24" y="76" width="52" height="42" rx="6" fill="rgba(255, 255, 255, 0.18)"/>
+          <circle cx="70" cy="80" r="4" fill="#64748B"/>
+          <g transform="translate(42, 88)">
+            <rect x="2" y="5" width="12" height="9" rx="2" fill="#64748B"/>
+            <path d="M4 5 V3 C4 1.3 5.8 0 8 0 C10.2 0 12 1.3 12 3 V5" stroke="#64748B" stroke-width="2" fill="none"/>
+          </g>
+        </g>
+        <line x1="4" y1="130" x2="96" y2="130" stroke="#64748B" stroke-width="6" stroke-linecap="round"/>
+      `}
+    </svg>
+    <span class="door-badge-num door-badge-${state}">${state==='open'?'✓':number}</span>
+  </div>`;
+}
+
+function bonusHTML(){
+  if(!CFG.BONUS||!CFG.BONUS.length)return "";
+  const b1=CFG.BONUS[0];
+  const b2=CFG.BONUS[1];
+  const bApp=CFG.BONUS[2]||{ic:"📲",t:"APP Inglês que Abre Portas",d:"Uma experiência interativa para aprender inglês na prática, com módulos, etapas progressivas e desafios — além de todas as aulas em vídeo."};
+  return `<div class="bonus-list">
+    <!-- BÔNUS 1 -->
+    <div class="bonus-card">
+      <div class="bonus-card-head">
+        <div class="bonus-icon-box">${b1.ic||"💬"}</div>
+        <span class="bonus-pill">Bônus 1</span>
+      </div>
+      <div class="bonus-card-body">
+        <b class="bonus-title">${b1.t}</b>
+        <p class="bonus-desc">${b1.d}</p>
+      </div>
+    </div>
+
+    <!-- BÔNUS 2 -->
+    <div class="bonus-card">
+      <div class="bonus-card-head">
+        <div class="bonus-icon-box">${b2.ic||"📄"}</div>
+        <span class="bonus-pill">Bônus 2</span>
+      </div>
+      <div class="bonus-card-body">
+        <b class="bonus-title">${b2.t}</b>
+        <p class="bonus-desc">${b2.d}</p>
+      </div>
+    </div>
+
+    <!-- BÔNUS EXCLUSIVO: APP INGLÊS QUE ABRE PORTAS -->
+    <div class="bonus-card bonus-card-app">
+      <div class="bonus-card-head">
+        <div class="bonus-icon-box" style="background:linear-gradient(135deg,#0060F8,#071A4D);box-shadow:0 4px 12px rgba(0,96,248,.3);">${bApp.ic||"📲"}</div>
+        <span class="bonus-pill" style="background:#EAF2FF;color:#0060F8;border-color:#BFDBFE;">Bônus Exclusivo</span>
+      </div>
+      <div class="bonus-card-body">
+        <b class="bonus-title" style="font-size:17px;color:#071A4D;">${bApp.t}</b>
+        <p class="bonus-desc" style="-webkit-line-clamp:unset;display:block;margin-bottom:12px;">${bApp.d}</p>
+      </div>
+
+      <div class="app-demo-cue">
+        <span>⚡ Demonstração Interativa:</span> toque na Porta 1 para experimentar 👇
+      </div>
+
+      <!-- MOLDURA DE SMARTPHONE -->
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <!-- Notch -->
+          <div class="phone-notch"><span class="phone-notch-dot"></span></div>
+
+          <!-- Top Bar -->
+          <div class="phone-top-bar">
+            <img src="logo.png" alt="Inglês que Abre Portas" class="phone-logo" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='assets/logo.png';}">
+            <div class="phone-stats">
+              <span class="phone-pill phone-pill-streak" title="Dias seguidos de estudo">🔥 <span id="p-streak">0</span></span>
+              <span class="phone-pill phone-pill-xp" title="Pontos de experiência">⚡ <span id="p-xp">0</span></span>
+              <span class="phone-pill phone-pill-doors" title="Portas concluídas">🚪 <span id="p-doors">0/4</span></span>
+              <span class="phone-pro">PRO</span>
+            </div>
+          </div>
+
+          <!-- Views Wrapper -->
+          <div class="phone-views-wrapper">
+            <!-- Trilha de Portas -->
+            <div id="phone-trail-view">
+              <div class="phone-track-card">
+                <div class="phone-track-head">
+                  <span class="track-tag">🚪 Trilha 1 Ativa</span>
+                  <span class="track-count" id="p-doors-sub">0/4 concluídas</span>
+                </div>
+                <h4 style="margin:8px 0 2px;font-size:14.5px;font-weight:800;color:#071A4D;">Apresentação em entrevistas</h4>
+                <p style="font-size:11.5px;color:#4B5B76;margin:0 0 8px;line-height:1.35;">Domine a abertura, sua experiência e o encerramento da conversa.</p>
+                <div class="phone-pbar-bg"><div id="p-pbar-fill" class="phone-pbar-fill" style="width:0%"></div></div>
+              </div>
+
+              <div class="phone-trail-doors">
+                <!-- Porta 1 (Ativa / Aberta) -->
+                <div class="door-node" id="door-node-1">
+                  <button class="door-graphic-btn" id="door-btn-1" type="button" aria-label="Abrir Porta 1: Cumprimentar e se apresentar">
+                    ${renderDoorSVG('current', 1)}
+                  </button>
+                  <button class="door-pill door-pill-active" id="pill-door-1" type="button">
+                    <span class="pill-badge">👉 Abrir porta</span>
+                    <span class="pill-title">Cumprimentar e se apresentar</span>
+                  </button>
+                  <button class="door-restart-btn" id="btn-restart-act" type="button" style="display:none;">↺ Refazer desafio</button>
+                </div>
+
+                <!-- Porta 2 (Bloqueada) -->
+                <div class="door-node" id="door-node-2">
+                  <button class="door-graphic-btn btn-locked-door" data-door="2" type="button" aria-label="Porta 2 Bloqueada: Falar da experiência">
+                    ${renderDoorSVG('locked', 2)}
+                  </button>
+                  <button class="door-pill door-pill-locked btn-locked-door" data-door="2" type="button">
+                    <span class="pill-badge">🔒 Porta bloqueada</span>
+                    <span class="pill-title">Falar da experiência</span>
+                  </button>
+                </div>
+
+                <!-- Porta 3 (Bloqueada) -->
+                <div class="door-node" id="door-node-3">
+                  <button class="door-graphic-btn btn-locked-door" data-door="3" type="button" aria-label="Porta 3 Bloqueada: Responder perguntas comuns">
+                    ${renderDoorSVG('locked', 3)}
+                  </button>
+                  <button class="door-pill door-pill-locked btn-locked-door" data-door="3" type="button">
+                    <span class="pill-badge">🔒 Porta bloqueada</span>
+                    <span class="pill-title">Responder perguntas comuns</span>
+                  </button>
+                </div>
+
+                <!-- Porta 4 (Bloqueada) -->
+                <div class="door-node" id="door-node-4">
+                  <button class="door-graphic-btn btn-locked-door" data-door="4" type="button" aria-label="Porta 4 Bloqueada: Encerrar a entrevista">
+                    ${renderDoorSVG('locked', 4)}
+                  </button>
+                  <button class="door-pill door-pill-locked btn-locked-door" data-door="4" type="button">
+                    <span class="pill-badge">🔒 Porta bloqueada</span>
+                    <span class="pill-title">Encerrar a entrevista</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tela de Atividade Interativa -->
+            <div id="phone-act-view">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <button class="phone-act-back" id="btn-act-back" type="button">← Voltar à trilha</button>
+                <span class="phone-act-badge">⚡ +50 XP em jogo</span>
+              </div>
+
+              <div class="phone-scenario-card">
+                <div class="scenario-recruiter">
+                  <div class="scenario-avatar">👔</div>
+                  <div>
+                    <b style="display:block;font-size:12px;color:#071A4D;">Simulação de Entrevista • Lição 1</b>
+                    <span style="font-size:10px;color:#0060F8;font-weight:600;">● Online • Exercício Prático</span>
+                  </div>
+                </div>
+                <div class="scenario-bubble">
+                  <p class="bubble-en">“Como dizer 'Bom dia, é um prazer conhecer você' formalmente?”</p>
+                  <p class="bubble-pt">Dica do método: use a fórmula de cortesia padrão recomendada para a abertura.</p>
+                </div>
+              </div>
+
+              <p class="phone-act-prompt">Escolha a resposta correta para a abertura da entrevista:</p>
+
+              <div class="act-options-list">
+                <button class="act-opt" data-opt="1" type="button">
+                  <span class="opt-letter">A</span>
+                  <span class="opt-text">“Good morning, I have pleasure for meet you.”</span>
+                </button>
+                <button class="act-opt" data-opt="2" type="button">
+                  <span class="opt-letter">B</span>
+                  <span class="opt-text">“Good morning, it is a pleasure to meet you.”</span>
+                </button>
+                <button class="act-opt" data-opt="3" type="button">
+                  <span class="opt-letter">C</span>
+                  <span class="opt-text">“Good morning, nice to know your person.”</span>
+                </button>
+              </div>
+
+              <div id="act-feedback" class="act-fb">
+                <div id="act-feedback-content"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal de Porta Bloqueada -->
+          <div id="phone-lock-modal" class="phone-modal-overlay">
+            <div class="phone-modal-card">
+              <div class="modal-lock-badge">🔒</div>
+              <h4 id="lock-modal-title" style="margin:0 0 6px;font-size:15px;font-weight:800;color:#071A4D;">Plano Pro • Inglês que Abre Portas</h4>
+              <div id="lock-modal-desc">
+                <p style="font-size:12px;color:#4B5B76;line-height:1.45;margin:0 0 10px;">Esta lição faz parte da trilha completa no aplicativo oficial.</p>
+                <div style="text-align:left;background:#F8FAFC;border:1px solid rgba(0,96,248,.1);border-radius:12px;padding:8px 10px;margin-bottom:12px;font-size:11px;color:#0B1736;line-height:1.4;">
+                  <b style="display:block;margin-bottom:4px;color:#071A4D;">Disponível com o curso:</b>
+                  <div>✓ Trilha completa: Perguntas difíceis do recrutador</div>
+                  <div>✓ Trilha completa: Falar da experiência e encerramento</div>
+                  <div>✓ Mais vocabulário prático e simulações com áudio nativo</div>
+                </div>
+              </div>
+              <a href="#buy" class="modal-cta-btn" id="modal-cta-buy">Garantir Acesso Completo ao App →</a>
+              <button class="modal-close-btn" id="modal-close-btn" type="button">Continuar no demo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="app-demo-note">💡 O aplicativo acompanha todo o conteúdo do curso e fica disponível imediatamente após a sua inscrição.</p>
+    </div>
+  </div>`;
+}
+
+/* ===== TELAS ===== */
+function intro(){
+ $.innerHTML=head(0,null)+`<div class="card c">
+  <span class="tag">Teste grátis de 2 minutos</span>
+  <h1>Seu inglês está pronto para a sua <span class="red">próxima oportunidade</span>?</h1>
+  <p>Responda perguntas de entrevistas reais e descubra o que treinar para se destacar.</p>
+  ${rise()}
+  ${socialCounterHTML('quiz')}
+  <button class="btn" id="go">Começar o teste grátis →</button>
+  <p class="small" style="margin-top:10px">Sem cadastro. Resultado na hora.</p>
+ </div>`;
+ document.getElementById("go").onclick=start;
+}
+function start(){
+  S.i=0;S.ans=[];S.flow=[OBJ];S.cur=OBJ;recalc(0);
+  trackPixel("track","ViewContent",{content_name:"Quiz Inglês que Abre Portas",content_category:"Quiz"},{oncePerSession:true});
+  step();
+}
+function recalc(upto){S.score=0;S.tags={};S.res=[];S.flow.forEach((s,i)=>{const k=S.ans[i];if(i>=upto||s.info||k===undefined)return;if(s.c!==undefined){const ok=k===s.c;if(ok)S.score++;S.res.push([s.sk,ok])}if(s.tag)S.tags[s.tag]=k})}
+function bind(){const b=document.getElementById("bk");if(b)b.onclick=()=>{const v=document.getElementById("vCard");if(v)v.pause();back()}}
+function back(){if(S.i<1)return;S.i--;if(S.flow[S.i].info&&S.i>0)S.i--;S.cur=S.flow[S.i];S.ans[S.i]=undefined;recalc(S.i);step()}
+function preloadVideo(){
+  if(document.getElementById("vPreload")||!CFG.VIDEO_URL)return;
+  const v=document.createElement("video");
+  v.id="vPreload";
+  v.src=CFG.VIDEO_URL;
+  v.preload="auto";
+  v.muted=true;
+  v.playsInline=true;
+  v.setAttribute("aria-hidden","true");
+  v.style.cssText="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;";
+  document.body.appendChild(v);
+  v.load();
+}
+function initVideo(){
+  const vid=document.getElementById("vCard");
+  if(!vid)return;
+  const playBtn=document.getElementById("vPlayBtn");
+  const sndBtn=document.getElementById("vSoundBtn");
+  const nx=document.getElementById("nx");
+  const pre=document.getElementById("vPreload");
+  if(pre)pre.pause();
+
+  vid.muted=false;
+
+  if(!vid.getAttribute("poster")){
+    vid.addEventListener("loadedmetadata",()=>{
+      if(vid.currentTime===0)try{vid.currentTime=0.01}catch(_){}
+    });
+  }
+
+  const togglePlay=()=>{
+    if(vid.ended){
+      vid.currentTime=0;
+      vid.muted=false;
+      vid.play().catch(()=>{
+        vid.muted=true;
+        if(sndBtn)sndBtn.textContent="🔇";
+        vid.play().catch(()=>{});
+      });
+    }else if(vid.paused){
+      vid.muted=false;
+      vid.play().catch(()=>{
+        vid.muted=true;
+        if(sndBtn)sndBtn.textContent="🔇";
+        vid.play().catch(()=>{});
+      });
+    }else{
+      vid.pause();
+    }
+  };
+  vid.onclick=togglePlay;
+  if(playBtn)playBtn.onclick=e=>{e.stopPropagation();togglePlay()};
+  if(sndBtn){
+    sndBtn.onclick=e=>{
+      e.stopPropagation();
+      vid.muted=!vid.muted;
+      sndBtn.textContent=vid.muted?"🔇":"🔊";
+      sndBtn.setAttribute("aria-label",vid.muted?"Ativar som":"Desativar som");
+    };
+  }
+
+  vid.pause();
+  if(playBtn)playBtn.style.display="grid";
+
+  vid.addEventListener("play",()=>{
+    if(playBtn)playBtn.style.display="none";
+  });
+  vid.addEventListener("pause",()=>{
+    if(!vid.ended&&playBtn)playBtn.style.display="grid";
+  });
+  let tPlay=false,tHalf=false,tEnd=false;
+  vid.addEventListener("play",()=>{
+    if(!tPlay){tPlay=true;track("VideoPlay")}
+  });
+  vid.addEventListener("timeupdate",()=>{
+    if(!tHalf&&vid.duration>0&&vid.currentTime>=vid.duration/2){
+      tHalf=true;
+      track("VideoMetade");
+    }
+  });
+  vid.addEventListener("ended",()=>{
+    if(!tEnd){tEnd=true;track("VideoCompleto")}
+    if(playBtn)playBtn.style.display="grid";
+    if(nx){
+      nx.classList.remove("btn-pulse");
+      void nx.offsetWidth;
+      nx.classList.add("btn-pulse");
+    }
+  });
+}
+function updateRiseMarker(){
+  const p=document.getElementById("risePath"),w=document.getElementById("riseWrap"),m=document.getElementById("riseMarker"),c=document.getElementById("riseChip");
+  if(!p||!w||!m||!c)return;
+  const len=p.getTotalLength(),pt=p.getPointAtLength(len*0.45);
+  const px=(pt.x/320)*100,py=(pt.y/120)*100;
+  m.style.left=px+"%";m.style.top=py+"%";
+  const wrapW=w.clientWidth,chipW=c.offsetWidth||150,xPos=(px/100)*wrapW;
+  let sX=0;
+  const leftEdge=xPos-0.75*chipW,rightEdge=xPos+0.25*chipW;
+  if(leftEdge<6)sX=6-leftEdge;
+  else if(rightEdge>wrapW-6)sX=(wrapW-6)-rightEdge;
+  c.style.left=px+"%";c.style.top=py+"%";
+  c.style.setProperty("--chip-shift",sX+"px");
+  c.style.setProperty("--tip-shift",(-sX)+"px");
+}
+function initRiseMarker(){
+  updateRiseMarker();
+  if(window.requestAnimationFrame)requestAnimationFrame(updateRiseMarker);
+  if(!window._riseBound){
+    window.addEventListener("resize",updateRiseMarker);
+    if(window.ResizeObserver)new ResizeObserver(updateRiseMarker).observe(document.body);
+    window._riseBound=true;
+  }
+}
+function step(){
+ const s=S.cur,p=Math.round((S.i+1)/Math.max(S.flow.length,9)*100);
+ const stepNum=S.i+1;
+ const stepName=s.tag||s.sk||(s.info?(s.social?'social':'info'):('q'+stepNum));
+ trackPixel("trackCustom","QuizStep",{step:stepNum,step_name:stepName},{oncePerStep:stepNum});
+ if(S.i>=2)preloadVideo();
+ if(s.info){
+   if(s.social){
+     $.innerHTML=head(1,p)+`<h1>Veja o que dizem os especialistas</h1>
+     <p class="c" style="margin-bottom:16px;font-size:15px;line-height:1.4">Segundo uma gerente de recrutamento, empresas chegam a pagar até 30% a mais por quem sabe inglês.</p>
+     <div class="card-social-img">
+       <img src="assets/prova-social-guia-da-carreira.webp" width="592" height="1156" alt="Trecho da matéria 'Saber inglês pode render um salário 30% maior', do Guia da Carreira, de 29 de agosto de 2014." decoding="async" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='prova-social-guia-da-carreira.webp';}">
+     </div>
+     <p class="small c social-caption">Fonte: Guia da Carreira, 29/08/2014. Estimativa de uma especialista; os valores variam conforme a vaga e a empresa.</p>
+     <p class="c social-bridge">Fluência leva tempo. O primeiro passo é o básico.</p>
+     ${socialCounterHTML('result')}
+     ${depo()}
+     <div class="insight"><b>💡 Esses resultados são de pessoas que, assim como você, começaram do básico.</b> A diferença? Elas treinaram as respostas certas.</div>
+     <button class="btn" id="nx">Ver meu resultado personalizado →</button>`;
+     document.getElementById("nx").onclick=next;
+   } else {
+     $.innerHTML=head(1,p)+`<h1>Suas respostas já dizem <span class="red">muito</span></h1>
+      <div class="card">${rise(true)}</div>
+      ${pesq()}
+      <div class="insight"><b>Com base no que você respondeu até aqui, já conseguimos identificar um padrão.</b> Mas faltam algumas perguntas para confirmar onde está o ponto exato que pode destravar o seu inglês.<br><span style="font-size:13px;color:var(--mut)">O diagnóstico completo depende das próximas respostas — e o resultado pode te surpreender.</span></div>
+      <h2 style="font-size:22px;text-align:center;margin:22px 0 12px;letter-spacing:-.02em">Isso já aconteceu com <span class="red">você</span>?</h2>
+      <div class="video-box" id="vBox">
+        <video id="vCard" src="${CFG.VIDEO_URL}" poster="${CFG.VIDEO_POSTER||'assets/capa-video.webp'}" playsinline preload="auto"></video>
+        <button type="button" class="video-play-btn" id="vPlayBtn" aria-label="Dar o play no vídeo com áudio">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        ${CFG.VIDEO_TEM_AUDIO?`<button type="button" class="video-sound-btn" id="vSoundBtn" aria-label="Desativar som">🔊</button>`:""}
+      </div>
+      <p class="video-subtext">Toque para assistir com áudio 🔊</p>
+      <button class="btn" id="nx">Continuar →</button>`;
+     initVideo();initRiseMarker();
+     document.getElementById("nx").onclick=()=>{
+       const v=document.getElementById("vCard");
+       if(v)v.pause();
+       next();
+     };
+   }
+   bind();window.scrollTo(0,0);return;
+ }
+ const isAge=s.tag==="idade"&&s.photos;
+ const optsHtml=isAge?s.o.map((x,k)=>{
+   const [img1,img2]=s.photos[k];
+   const isLazy=k>=2;
+   const alt=`Duas pessoas adultas na faixa de ${x.toLowerCase()}`;
+   return `<button class="opt opt-age" data-k="${k}">
+     <div class="opt-age-photos">
+       <div class="opt-age-img-wrap">
+         <div class="opt-age-ph" aria-hidden="true"><span class="opt-age-ph-ic">${s.ic[k]}</span></div>
+         <img src="assets/${img1}" alt="${alt}" width="200" height="250" decoding="async"${isLazy?' loading="lazy"':''} onerror="if(!this.dataset.r){this.dataset.r='1';this.src=this.src.replace('assets/','');}else{this.style.display='none';this.parentElement.classList.add('ph');}">
+       </div>
+       <div class="opt-age-img-wrap">
+         <div class="opt-age-ph" aria-hidden="true"><span class="opt-age-ph-ic">${s.ic[k]}</span></div>
+         <img src="assets/${img2}" alt="${alt}" width="200" height="250" decoding="async"${isLazy?' loading="lazy"':''} onerror="if(!this.dataset.r){this.dataset.r='1';this.src=this.src.replace('assets/','');}else{this.style.display='none';this.parentElement.classList.add('ph');}">
+       </div>
+     </div>
+     <div class="opt-age-bottom">
+       <span class="tx"><b>${x}</b></span>
+       <span class="bx"></span>
+     </div>
+   </button>`;
+ }).join(""):s.o.map((x,k)=>`<button class="opt" data-k="${k}">${s.ic?`<span class="ic">${s.ic[k]}</span>`:""}<span class="tx"><b>${x}</b>${s.sub?`<small>${s.sub[k]}</small>`:""}</span><span class="bx"></span></button>`).join("");
+ $.innerHTML=head(S.i>0,p)+`<h2>${s.t}</h2><div role="group" aria-label="${s.t.replace(/<[^>]+>/g,'')}">${optsHtml}</div><div id="fb"></div>`;
+ const bs=document.querySelectorAll(".opt");
+ bs.forEach((b,idx)=>{
+   b.onclick=()=>pick(+b.dataset.k);
+   b.onkeydown=e=>{
+     if(e.key==="ArrowDown"||e.key==="ArrowRight"){
+       e.preventDefault();
+       bs[(idx+1)%bs.length].focus();
+     }else if(e.key==="ArrowUp"||e.key==="ArrowLeft"){
+       e.preventDefault();
+       bs[(idx-1+bs.length)%bs.length].focus();
+     }
+   };
+ });
+ bind();window.scrollTo(0,0);
+}
+function pick(k){
+ const s=S.cur,bs=[...document.querySelectorAll(".opt")];bs.forEach(b=>b.disabled=true);
+ S.ans[S.i]=k;let msg=s.fb||"";let tipMsg="";
+ if(s.c!==undefined){
+   const ok=k===s.c;
+   bs[k].classList.add(ok?"ok":"no");
+   bs[s.c].classList.add("ok");
+   msg=ok?s.ok:s.no;
+   tipMsg=ok?(s.oktip||""):(s.notip||"");
+ }else{
+   bs[k].classList.add("sel");
+   tipMsg=s.fbtip||"";
+ }
+ if(s.br){S.br=k?"B":"A";S.flow=build(S.br);track("Objetivo_"+S.br)}
+ recalc(S.i+1);
+ const fbEl=document.getElementById("fb");
+ fbEl.innerHTML=`<div class="fb">${msg}${tipMsg?`<span class="fb-tip">${tipMsg}</span>`:""}</div><button class="btn" id="nx">Continuar →</button>`;
+ const nxBtn=document.getElementById("nx");
+ nxBtn.onclick=next;
+ const reduceMotion=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ nxBtn.scrollIntoView({behavior:reduceMotion?"auto":"smooth",block:"nearest"});
+}
+function next(){S.i++;if(S.i>=S.flow.length)return result();S.cur=S.flow[S.i];step()}
+
+const LV=[["Iniciante","Seu ponto de partida está claro. Com o treino certo, você evolui rápido."],["Básico","Você tem uma base, mas ainda erra em pontos importantes. O treino direcionado resolve isso."],["Intermediário","Você acerta boa parte, mas ainda escorrega em detalhes que fazem diferença na entrevista."],["Base sólida","Você está perto. Falta polir as respostas e ganhar confiança."]];
+const DOR=["não entender a pergunta","travar na hora de responder","não saber falar da sua experiência","errar a pronúncia"];
+const MOT=["o salário","o crescimento na carreira","o trabalho remoto ou híbrido","o ambiente e a qualidade de vida"];
+const HEAD_A={
+  title:"Você já sabe onde está. Agora é hora de <span class='red'>chegar preparado</span>.",
+  sub:"O curso foi feito para quem precisa se sair bem na entrevista — mesmo com inglês básico."
+};
+const HEAD_B={
+  title:"Pare de perder vagas por causa do <span class='red'>inglês</span>.",
+  sub:"Aprenda o inglês que as empresas pedem — sem enrolação, direto ao que abre portas."
+};
+
+function result(){
+ const sc=S.score,lv=sc<=1?0:sc<=2?1:sc<=3?2:3,l=LV[lv],t=S.tags,b=S.br;
+ trackPixel("track","Lead",{content_name:"Quiz concluído",content_category:"Resultado do Quiz"},{oncePerSession:true});
+ const hd=b==="A"?HEAD_A:HEAD_B;
+
+ const body=b==="A"
+  ?`<div class="insight"><p>Boa parte das entrevistas gira em torno de perguntas parecidas: se apresentar, falar da experiência e dizer por que quer a vaga. <b>Isso dá para treinar.</b></p>
+  <p>Sua maior preocupação é <b>${DOR[t.dor]}</b>. É exatamente nisso que o treino das respostas mais comuns faz diferença.</p>
+  <p style="margin:0"><b>${PH3}</b></p></div>`
+  :`<div class="insight"><p>Você quer mudar de emprego por causa d${MOT[t.mot]}. <b>Muitas vagas pedem inglês, e entender o básico abre portas que você nem imaginava.</b></p>
+  ${t.cmp===1||t.cmp===2?`<p>Se o inglês te faz pular vagas, você está se limitando sem precisar. <b>Com o básico certo, essas portas se abrem.</b></p>`:""}</div>`;
+
+ const chips=S.res.map(([n,ok],i)=>`<span class="chip ${ok?"g":"r"}" style="animation-delay:${1.6+i*.2}s">${ok?"✓ ":"⚠ Treinar: "}${n}</span>`).join("");
+
+ $.innerHTML=head(0,100)+`
+  <!-- RESULTADO -->
+  <div class="card">
+   <div class="c"><span class="tag">Seu resultado personalizado</span></div>
+   ${chart(lv)}
+   <p class="lvl">${l[0]}</p>
+   <p class="c">Você acertou <b>${sc} de 5</b>. ${l[1]}</p>
+   <div class="chips">${chips}</div>
+   ${body}
+   <p class="c" style="margin:16px 0 0"><b>${PH}</b></p>
+  </div>
+
+  ${socialCounterHTML('result')}
+
+  <!-- OFERTA -->
+  <div id="of">
+   <div class="offer-hero">
+    <span class="offer-tag">${b==="A"?"🎯 Preparação para Entrevista":"🚀 Inglês para Novas Oportunidades"}</span>
+    <h2>${hd.title}</h2>
+    <p>${hd.sub}</p>
+   </div>
+
+   <div class="card">
+    ${mods()}
+
+    <div class="sep"></div>
+
+    <h2 class="bonus-section-title">🎁 Bônus inclusos</h2>
+    ${bonusHTML()}
+
+    ${CFG.DEPOIMENTOS && CFG.DEPOIMENTOS.length ? `
+    <div class="sep"></div>
+
+    <!-- PROVA SOCIAL NA OFERTA -->
+    <h2 style="font-size:20px;text-align:center">O que dizem os alunos</h2>
+    ${depo()}
+    ` : ""}
+
+    <div class="sep"></div>
+
+    <!-- PREÇO -->
+    <div class="preco-box">
+     <p class="small" style="margin:0 0 4px">Investimento especial por tempo limitado</p>
+     <div class="de">de ${CFG.PRECO_DE}</div>
+     <div class="por">por ${CFG.PRECO_POR}</div>
+     <p class="small" style="margin:4px 0 0">Pagamento único. Acesso imediato.</p>
+    </div>
+
+    ${urgencyBarHTML()}
+
+    <!-- GARANTIA -->
+    <div class="garantia-box">
+     <div class="shield">🛡️</div>
+     <b>Garantia incondicional de ${CFG.GARANTIA}</b>
+     <p>Acesse o curso, faça as aulas. Se em ${CFG.GARANTIA} você sentir que não é para você, devolvemos 100% do valor. Sem perguntas, sem burocracia.</p>
+    </div>
+
+    <!-- CTA PRINCIPAL -->
+    <a class="btn cta-main" id="buy" href="${CFG.CHECKOUT_URL}">
+      Garantir minha vaga agora →
+    </a>
+    <p class="c small" style="margin:8px 0 4px">Acesso imediato após a confirmação do pagamento</p>
+
+    <p class="c small" style="margin-top:16px;line-height:1.6">${PH}<br>O próximo passo é seu.</p>
+   </div>
+
+   <!-- PERGUNTAS FREQUENTES -->
+   ${faqHTML()}
+  </div>`;
+ window.scrollTo(0,0);
+
+ /* Módulos interação */
+ const wc=document.getElementById("wc");
+ document.querySelectorAll(".want").forEach(c=>c.onchange=()=>{
+   const n=document.querySelectorAll(".want:checked").length;
+   if(wc)wc.textContent=n?`Você marcou ${n} de ${CFG.MODULOS.length}. O curso inclui todos os módulos.`:"Toque em um módulo para ver o conteúdo.";
+ });
+ const wz=document.getElementById("wz");
+ if(wz&&typeof wform==="function")wz.onclick=wform;
+ if("IntersectionObserver"in window){const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){track("OfertaVista");io.disconnect()}});io.observe(document.getElementById("of"))}
+ initAppDemo();
+ if(window.__utmizey&&typeof window.__utmizey.refresh==="function"){try{window.__utmizey.refresh();}catch(_){}}
+}
+
+/* === INTERATIVIDADE DO APP DEMO === */
+function initAppDemo(){
+  const phoneTrail=document.getElementById("phone-trail-view");
+  const phoneAct=document.getElementById("phone-act-view");
+  const lockModal=document.getElementById("phone-lock-modal");
+  if(!phoneTrail||!phoneAct||!lockModal)return;
+
+  let state={streak:0,xp:0,doors:0,done:false};
+
+  const streakEl=document.getElementById("p-streak");
+  const xpEl=document.getElementById("p-xp");
+  const doorsEl=document.getElementById("p-doors");
+  const doorsSubEl=document.getElementById("p-doors-sub");
+  const pbarEl=document.getElementById("p-pbar-fill");
+  const doorBtn1=document.getElementById("door-btn-1");
+  const pillDoor1=document.getElementById("pill-door-1");
+  const restartBtn=document.getElementById("btn-restart-act");
+  const actBackBtn=document.getElementById("btn-act-back");
+  const feedbackBox=document.getElementById("act-feedback");
+  const feedbackContent=document.getElementById("act-feedback-content");
+  const optBtns=document.querySelectorAll(".act-opt");
+
+  function openAct(){
+    phoneTrail.style.display="none";
+    phoneAct.style.display="flex";
+  }
+  function closeAct(){
+    phoneAct.style.display="none";
+    phoneTrail.style.display="block";
+  }
+
+  if(doorBtn1)doorBtn1.onclick=openAct;
+  if(pillDoor1)pillDoor1.onclick=openAct;
+  if(actBackBtn)actBackBtn.onclick=closeAct;
+  if(restartBtn)restartBtn.onclick=()=>{
+    resetActUI();
+    openAct();
+  };
+
+  /* Portas bloqueadas */
+  const lockedBtns=document.querySelectorAll(".btn-locked-door");
+  const modalTitle=document.getElementById("lock-modal-title");
+  const modalDesc=document.getElementById("lock-modal-desc");
+  const doorInfo={
+    "2":{t:"Porta 2: Falar da sua Experiência",d:"Conte sobre suas funções anteriores, tempo de carreira e formação em inglês com naturalidade."},
+    "3":{t:"Porta 3: Responder Perguntas Comuns",d:"Responda com segurança sobre motivação, pontos fortes e trabalho em equipe em entrevistas reais."},
+    "4":{t:"Porta 4: Encerrar a Entrevista",d:"Como fazer perguntas pertinentes sobre a vaga, agradecer a oportunidade e causar uma impressão duradoura."}
+  };
+
+  lockedBtns.forEach(btn=>{
+    btn.onclick=(e)=>{
+      e.preventDefault();
+      const num=btn.getAttribute("data-door")||"2";
+      if(modalTitle&&doorInfo[num])modalTitle.textContent=doorInfo[num].t;
+      if(modalDesc&&doorInfo[num]){
+        modalDesc.innerHTML=`
+          <p style="font-size:12px;color:#4B5B76;line-height:1.45;margin:0 0 10px;">${doorInfo[num].d}</p>
+          <div style="text-align:left;background:#F8FAFC;border:1px solid rgba(0,96,248,.1);border-radius:12px;padding:8px 10px;margin-bottom:12px;font-size:11px;color:#0B1736;line-height:1.4;">
+            <b style="display:block;margin-bottom:4px;color:#071A4D;">Disponível com o curso:</b>
+            <div>✓ Trilha completa com simulações e áudios</div>
+            <div>✓ Mais de 50 portas com feedback inteligente</div>
+            <div>✓ Guia passo a passo para cada fase da entrevista</div>
+          </div>
+        `;
+      }
+      lockModal.classList.add("active");
+    };
+  });
+
+  const modalClose=document.getElementById("modal-close-btn");
+  if(modalClose)modalClose.onclick=()=>lockModal.classList.remove("active");
+  lockModal.onclick=(e)=>{
+    if(e.target===lockModal)lockModal.classList.remove("active");
+  };
+
+  const modalBuy=document.getElementById("modal-cta-buy");
+  if(modalBuy){
+    modalBuy.onclick=(e)=>{
+      e.preventDefault();
+      lockModal.classList.remove("active");
+      const target=document.getElementById("buy");
+      if(target){
+        target.scrollIntoView({behavior:"smooth",block:"center"});
+        target.classList.add("btn-pulse");
+        setTimeout(()=>target.classList.remove("btn-pulse"),2000);
+      }
+    };
+  }
+
+  function resetActUI(){
+    optBtns.forEach(b=>{
+      b.classList.remove("selected-correct","selected-wrong");
+      b.disabled=false;
+    });
+    if(feedbackBox){
+      feedbackBox.style.display="none";
+      feedbackBox.className="act-fb";
+    }
+  }
+
+  optBtns.forEach(btn=>{
+    btn.onclick=()=>{
+      const opt=btn.getAttribute("data-opt");
+      resetActUI();
+
+      if(opt==="2"){
+        btn.classList.add("selected-correct");
+        feedbackBox.className="act-fb act-fb-ok";
+        feedbackBox.style.display="block";
+        feedbackContent.innerHTML=`
+          <div style="font-weight:800;font-size:12px;margin-bottom:4px;color:#14532D;">🎉 Muito bem! (+50 XP)</div>
+          <p style="margin:0 0 8px;font-size:11px;color:#15803D;line-height:1.35;">Em inglês, "it is a pleasure to meet you" é a fórmula cortês ideal para o início de uma entrevista. Causa uma primeira impressão profissional impecável!</p>
+          <button class="act-btn-complete" id="btn-finish-act" type="button">Avançar na trilha →</button>
+        `;
+        setTimeout(()=>{if(feedbackBox)feedbackBox.scrollIntoView({behavior:"smooth",block:"nearest"})},50);
+        const finishBtn=document.getElementById("btn-finish-act");
+        if(finishBtn){
+          finishBtn.onclick=()=>{
+            state.done=true;
+            state.streak=1;
+            state.xp=50;
+            state.doors=1;
+            if(streakEl)streakEl.textContent=state.streak;
+            if(xpEl)xpEl.textContent=state.xp;
+            if(doorsEl)doorsEl.textContent="1/4";
+            if(doorsSubEl)doorsSubEl.textContent="1/4 concluídas";
+            if(pbarEl)pbarEl.style.width="25%";
+
+            if(doorBtn1)doorBtn1.innerHTML=renderDoorSVG('open', 1, true);
+            if(pillDoor1){
+              pillDoor1.className="door-pill door-pill-done";
+              pillDoor1.innerHTML=`<span class="pill-badge">✓ Porta aberta</span><span class="pill-title">Cumprimentar e se apresentar</span>`;
+            }
+            if(restartBtn)restartBtn.style.display="inline-block";
+
+            closeAct();
+          };
+        }
+      }else{
+        btn.classList.add("selected-wrong");
+        feedbackBox.className="act-fb act-fb-err";
+        feedbackBox.style.display="block";
+        const msg=opt==="1"
+          ?"Essa resposta é informal demais e não responde à pergunta do entrevistador. Na abertura, o recrutador espera saber quem você é e sua área de atuação."
+          :"Nunca comece desvalorizando seu nível de inglês ou demonstrando desespero! No método, ensinamos frases prontas para você manter a calma e falar com firmeza.";
+        feedbackContent.innerHTML=`
+          <div style="font-weight:800;font-size:12px;margin-bottom:4px;color:#991b1b;">❌ Quase lá! Veja a dica do método:</div>
+          <p style="margin:0 0 8px;font-size:11px;color:#b91c1c;line-height:1.35;">${msg}</p>
+          <button class="act-btn-retry" id="btn-retry-act" type="button">Tentar outra opção</button>
+        `;
+        setTimeout(()=>{if(feedbackBox)feedbackBox.scrollIntoView({behavior:"smooth",block:"nearest"})},50);
+        const retryBtn=document.getElementById("btn-retry-act");
+        if(retryBtn){
+          retryBtn.onclick=()=>{
+            resetActUI();
+          };
+        }
+      }
+    };
+  });
+}
+
+location.hash==="#quiz"?start():intro();
+</script>
+</body>
+</html>
