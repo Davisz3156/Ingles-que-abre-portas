@@ -730,11 +730,26 @@ function faqHTML(){
 }
 
 /* ===== PERGUNTAS (ic = ícones, sub = subtítulos, sk = habilidade) ===== */
-const OBJ={t:`Qual é o seu objetivo com o <span class="red">inglês que abre portas</span>?`,o:[`Me sair melhor nas entrevistas`,`Conseguir uma oportunidade de emprego melhor`],ic:[`🎯`,`🚀`],sub:[`Respostas prontas e segurança na hora H`,`Me candidatar a mais vagas com confiança`],fb:`Boa escolha. Vamos personalizar tudo para o seu objetivo.`,br:1};
+const OBJ={t:`Qual é o seu objetivo com o <span class="red">inglês que abre portas</span>?`,o:[`Conquistar um emprego ou uma oportunidade melhor`,`Crescer no meu emprego atual`],ic:[`🎯`,`📈`],sub:[`Quero me destacar nas entrevistas e conquistar novas oportunidades.`,`Quero ganhar mais, crescer profissionalmente e conquistar reconhecimento com o inglês.`],fb:`Boa escolha. Vamos personalizar tudo para o seu objetivo.`,br:1};
 const SELF={t:`Como você avalia seu inglês hoje?`,o:[`Quase zero`,`Entendo um pouco`,`Me viro no básico`],ic:[`🌱`,`📘`,`💬`],fb:`Ótimo ponto de partida. Veja como você se sai na prática — as próximas perguntas simulam situações reais.`,fbtip:`Não se preocupe com erros. Eles mostram exatamente onde focar.`};
 const AGE={t:`Qual é a sua idade?`,o:[`Até 24 anos`,`25 a 34 anos`,`35 a 44 anos`,`45 anos ou mais`],ic:[`🎓`,`💼`,`📈`,`🏆`],fb:`Anotado. Isso nos ajuda a personalizar o seu resultado e as recomendações.`,tag:`idade`,photos:[[`idade-1-homem.webp`,`idade-1-mulher.webp`],[`idade-2-mulher.webp`,`idade-2-homem.webp`],[`idade-3-homem.webp`,`idade-3-mulher.webp`],[`idade-4-mulher.webp`,`idade-4-homem.webp`]]};
 const INFO={info:1},SOCIAL={info:1,social:1};
-const build=b=>[OBJ,SELF,AGE,...F[b],SOCIAL];
+const INT_BASE={
+  o:[`Tenho alto interesse`,`Preciso urgentemente`,`Quero, mas o inglês ainda me trava`],
+  ic:[`📈`,`⚡`,`💬`],
+  fbk:[
+    `Interesse é o primeiro passo. Agora falta transformar essa vontade em prática.`,
+    `Entendido. Quando é urgente, um caminho simples e prático faz toda a diferença.`,
+    `Muita gente sente isso. O que destrava é treinar as respostas certas, aos poucos.`
+  ],
+  fbtip:`Falta pouco para ver o seu resultado.`,
+  tag:`interesse`
+};
+const INT={
+  A:{...INT_BASE,t:`O quanto você gostaria de conquistar um emprego que pague de 30% a 60% a mais?`},
+  B:{...INT_BASE,t:`O quanto você gostaria de ganhar de 30% a 60% a mais na sua profissão?`}
+};
+const build=b=>[OBJ,SELF,AGE,...F[b],SOCIAL,INT[b]];
 const F={
 A:[
 {t:`Quando é a sua próxima entrevista?`,o:[`Esta semana`,`Nas próximas semanas`,`Ainda não marquei, mas estou me candidatando`],ic:[`⏰`,`📅`,`📨`],fb:`Anotado. As próximas perguntas simulam uma entrevista de verdade — responda como se estivesse lá.`,fbtip:`Cada resposta sua revela um ponto forte ou algo para treinar.`,tag:`urg`},
@@ -1097,7 +1112,7 @@ function start(){
 }
 function recalc(upto){S.score=0;S.tags={};S.res=[];S.flow.forEach((s,i)=>{const k=S.ans[i];if(i>=upto||s.info||k===undefined)return;if(s.c!==undefined){const ok=k===s.c;if(ok)S.score++;S.res.push([s.sk,ok])}if(s.tag)S.tags[s.tag]=k})}
 function bind(){const b=document.getElementById("bk");if(b)b.onclick=()=>{const v=document.getElementById("vCard");if(v)v.pause();back()}}
-function back(){if(S.i<1)return;S.i--;if(S.flow[S.i].info&&S.i>0)S.i--;S.cur=S.flow[S.i];S.ans[S.i]=undefined;recalc(S.i);step()}
+function back(){if(S.i<1)return;S.i--;if(S.flow[S.i].info&&!S.flow[S.i].social&&S.i>0)S.i--;S.cur=S.flow[S.i];S.ans[S.i]=undefined;recalc(S.i);step()}
 function preloadVideo(){
   if(document.getElementById("vPreload")||!CFG.VIDEO_URL)return;
   const v=document.createElement("video");
@@ -1223,9 +1238,9 @@ function step(){
      $.innerHTML=head(1,p)+`<h1>Veja o que dizem os especialistas</h1>
      <p class="c" style="margin-bottom:16px;font-size:15px;line-height:1.4">Segundo uma gerente de recrutamento, empresas chegam a pagar até 30% a mais por quem sabe inglês.</p>
      <div class="card-social-img">
-       <img src="assets/prova-social-guia-da-carreira.webp" width="592" height="1156" alt="Trecho da matéria 'Saber inglês pode render um salário 30% maior', do Guia da Carreira, de 29 de agosto de 2014." decoding="async" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='prova-social-guia-da-carreira.webp';}">
+       <img src="assets/prova-social-guia-da-carreira.webp" width="592" height="1156" alt="Trecho da matéria 'Saber inglês pode render um salário 30% maior', do Guia da Carreira, de 17 de setembro de 2026." decoding="async" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='prova-social-guia-da-carreira.webp';}">
      </div>
-     <p class="small c social-caption">Fonte: Guia da Carreira, 29/08/2014. Estimativa de uma especialista; os valores variam conforme a vaga e a empresa.</p>
+     <p class="small c social-caption">Fonte: Guia da Carreira, 17/09/2026. Referência de mercado: o domínio do inglês pode gerar valorização salarial de até 30%, conforme a área, experiência e empresa.</p>
      <p class="c social-bridge">Fluência leva tempo. O primeiro passo é o básico.</p>
      ${socialCounterHTML('result')}
      ${depo()}
@@ -1305,6 +1320,7 @@ function pick(k){
    tipMsg=ok?(s.oktip||""):(s.notip||"");
  }else{
    bs[k].classList.add("sel");
+   msg=(s.fbk&&s.fbk[k])||s.fb||"";
    tipMsg=s.fbtip||"";
  }
  if(s.br){S.br=k?"B":"A";S.flow=build(S.br);track("Objetivo_"+S.br)}
