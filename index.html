@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Inglês que Abre Portas | Teste grátis de inglês para entrevistas</title>
 <meta name="description" content="Descubra se o seu inglês está pronto para a próxima entrevista ou oportunidade. Teste grátis de 2 minutos com resultado personalizado.">
-<link rel="icon" href="logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Meta Pixel Code -->
 <script>
@@ -774,7 +774,7 @@ INFO,
 const S={flow:[],i:0,score:0,tags:{},res:[],ans:[],br:"A",cur:null};
 
 /* ===== COMPONENTES ===== */
-const head=(back,p)=>`<div class="top">${back?`<button id="bk" aria-label="Voltar">‹</button>`:`<span></span>`}<img src="logo.png" alt="Inglês que Abre Portas" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='assets/logo.png';}"><span></span></div>${p!=null?`<div class="bar"><i style="width:${p}%"></i></div>`:""}`;
+const head=(back,p)=>`<div class="top">${back?`<button id="bk" aria-label="Voltar">‹</button>`:`<span></span>`}<img src="assets/logo.webp" alt="Inglês que Abre Portas" width="44" height="44" decoding="async"><span></span></div>${p!=null?`<div class="bar"><i style="width:${p}%"></i></div>`:""}`;
 const line=`M30,128 C60,122 90,112 130,102 S170,86 210,72 S250,52 270,40 S290,28 298,22`;
 const NODES=[[30,128],[130,102],[210,72],[270,40]],GOAL=[298,22];
 const tip=(x,y,t,d=-34)=>{const w=t.length*6.4+16,tx=Math.min(Math.max(x-w/2,2),318-w);return `<g class="pop"><rect x="${tx}" y="${y+d}" width="${w}" height="22" rx="7" fill="#0b1b3a"/><text x="${tx+w/2}" y="${y+d+15}" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${t}</text></g>`};
@@ -951,7 +951,7 @@ function bonusHTML(){
 
           <!-- Top Bar -->
           <div class="phone-top-bar">
-            <img src="logo.png" alt="Inglês que Abre Portas" class="phone-logo" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='assets/logo.png';}">
+            <img src="assets/logo.webp" alt="Inglês que Abre Portas" class="phone-logo" width="32" height="32" loading="lazy" decoding="async">
             <div class="phone-stats">
               <span class="phone-pill phone-pill-streak" title="Dias seguidos de estudo">🔥 <span id="p-streak">0</span></span>
               <span class="phone-pill phone-pill-xp" title="Pontos de experiência">⚡ <span id="p-xp">0</span></span>
@@ -1238,7 +1238,7 @@ function step(){
      $.innerHTML=head(1,p)+`<h1>Veja o que dizem os especialistas</h1>
      <p class="c" style="margin-bottom:16px;font-size:15px;line-height:1.4">Segundo uma gerente de recrutamento, empresas chegam a pagar até 30% a mais por quem sabe inglês.</p>
      <div class="card-social-img">
-       <img src="assets/prova-social-guia-da-carreira.webp" width="592" height="1156" alt="Trecho da matéria 'Saber inglês pode render um salário 30% maior', do Guia da Carreira, de 17 de setembro de 2026." decoding="async" onerror="if(!this.dataset.r){this.dataset.r='1';this.src='prova-social-guia-da-carreira.webp';}">
+       <img src="assets/prova-social-guia-da-carreira.webp" width="760" height="1484" alt="Trecho da matéria 'Saber inglês pode render um salário 30% maior', do Guia da Carreira, de 17 de setembro de 2026." loading="lazy" decoding="async">
      </div>
      <p class="small c social-caption">Fonte: Guia da Carreira, 17/09/2026. Referência de mercado: o domínio do inglês pode gerar valorização salarial de até 30%, conforme a área, experiência e empresa.</p>
      <p class="c social-bridge">Fluência leva tempo. O primeiro passo é o básico.</p>
@@ -1254,7 +1254,7 @@ function step(){
       <div class="insight"><b>Com base no que você respondeu até aqui, já conseguimos identificar um padrão.</b> Mas faltam algumas perguntas para confirmar onde está o ponto exato que pode destravar o seu inglês.<br><span style="font-size:13px;color:var(--mut)">O diagnóstico completo depende das próximas respostas — e o resultado pode te surpreender.</span></div>
       <h2 style="font-size:22px;text-align:center;margin:22px 0 12px;letter-spacing:-.02em">Isso já aconteceu com <span class="red">você</span>?</h2>
       <div class="video-box" id="vBox">
-        <video id="vCard" src="${CFG.VIDEO_URL}" poster="${CFG.VIDEO_POSTER||'assets/capa-video.webp'}" playsinline preload="auto"></video>
+        <video id="vCard" src="${CFG.VIDEO_URL}" poster="${CFG.VIDEO_POSTER||'assets/capa-video.webp'}" playsinline preload="metadata"></video>
         <button type="button" class="video-play-btn" id="vPlayBtn" aria-label="Dar o play no vídeo com áudio">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
         </button>
@@ -1280,11 +1280,11 @@ function step(){
      <div class="opt-age-photos">
        <div class="opt-age-img-wrap">
          <div class="opt-age-ph" aria-hidden="true"><span class="opt-age-ph-ic">${s.ic[k]}</span></div>
-         <img src="assets/${img1}" alt="${alt}" width="200" height="250" decoding="async"${isLazy?' loading="lazy"':''} onerror="if(!this.dataset.r){this.dataset.r='1';this.src=this.src.replace('assets/','');}else{this.style.display='none';this.parentElement.classList.add('ph');}">
+         <img src="assets/${img1}" alt="${alt}" width="200" height="250" decoding="async"${isLazy?' loading="lazy"':''} onerror="this.style.display='none';this.parentElement.classList.add('ph');">
        </div>
        <div class="opt-age-img-wrap">
          <div class="opt-age-ph" aria-hidden="true"><span class="opt-age-ph-ic">${s.ic[k]}</span></div>
-         <img src="assets/${img2}" alt="${alt}" width="200" height="250" decoding="async"${isLazy?' loading="lazy"':''} onerror="if(!this.dataset.r){this.dataset.r='1';this.src=this.src.replace('assets/','');}else{this.style.display='none';this.parentElement.classList.add('ph');}">
+         <img src="assets/${img2}" alt="${alt}" width="200" height="250" decoding="async"${isLazy?' loading="lazy"':''} onerror="this.style.display='none';this.parentElement.classList.add('ph');">
        </div>
      </div>
      <div class="opt-age-bottom">
