@@ -23,7 +23,7 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 <script src="https://utmizey.com.br/v3/utmizey.js"
         data-utmizey-id="2602fc0d-7a48-4657-bc74-94fd23eb893d"
-        data-utmizey-checkout="ggcheckout.app,ggcheckout.com"
+        data-utmizey-checkout="ggcheckout.app,ggcheckout.com,pay.portasenglish.online,portasenglish.online"
         data-utmizey-hotmart
         defer></script>
 <style>
@@ -433,7 +433,7 @@ src="https://www.facebook.com/tr?id=1471201201859881&ev=PageView&noscript=1"
 <script>
 /* ===== CONFIGURAÇÃO: edite aqui ===== */
 const CFG={
-  CHECKOUT_URL:"https://ggcheckout.app/checkout/v5/dtb2HdH5sdXiTqYPZ9B8nx", /* cole o link do checkout */
+  CHECKOUT_URL:"https://pay.portasenglish.online/checkout/v5/dtb2HdH5sdXiTqYPZ9B8nx", /* cole o link do checkout */
   OFFER_VALUE:39.99,           /* valor da oferta para o InitiateCheckout */
   PRECO_DE:"R$ 274,99",        /* use "de" só se esse preço já foi ou será de fato praticado */
   PRECO_POR:"R$ 39,99",
@@ -602,7 +602,7 @@ function getGGCheckoutUrl(el){
   const dataUrl=el.dataset?(el.dataset.checkoutUrl||el.dataset.checkout||el.dataset.href||el.dataset.url||el.dataset.link||""):"";
   const url=href||dataUrl;
   if(!url||url==="#"||url.startsWith("#"))return null;
-  if((CFG.CHECKOUT_URL&&CFG.CHECKOUT_URL!=="#"&&url.indexOf(CFG.CHECKOUT_URL)===0)||/ggcheckout/i.test(url)){
+  if((CFG.CHECKOUT_URL&&CFG.CHECKOUT_URL!=="#"&&url.indexOf(CFG.CHECKOUT_URL)===0)||/ggcheckout|portasenglish/i.test(url)){
     return url;
   }
   return null;
